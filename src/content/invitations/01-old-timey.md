@@ -1,6 +1,6 @@
 ---
-title: "The Old-Timey Magic Poster"
-style: "Old-Timey Magic Poster"
+title: "The Old-Timey Invitation"
+style: "Old-Timey Invitation"
 date: 2026-05-01
 type: html
 fonts: ["UnifrakturMaguntia", "IM+Fell+English:ital@0;1"]
@@ -171,7 +171,7 @@ thumbnail: "/thumbnails/01-old-timey.png"
   </div>
 
   <div class="ot-body">
-    <p><span class="ot-drop">B</span>y the gracious leave of Providence, and in the finest tradition of the Great Fraternity of Conjurers, the members and friends of <em>The Boston Magic Lab</em> are hereby bidden to attend our most distinguished Annual Summer Barbecue — that most sacred of post-season rites, observed without fail since the founding of our fellowship.</p>
+    <p><span class="ot-drop">B</span>y the gracious leave of Providence, and in the finest tradition of the Great Fraternity of Conjurers, the members and friends of <em>The Boston Magic Lab</em> are hereby bidden to attend our most distinguished Annual Summer Barbecue — that most sacred of post-season rites, observed without fail since the founding of our fellowship. [Okay, not really, but it sounds good. -ed]</p>
     <p>Our season having been one of singular wonder and accomplishment, it is meet and proper that we should gather in the open air, that the warmth of good company might rival that of the coals. The celebrated <em>Jeannine</em>, whose mastery of the culinary flame is itself a feat worthy of any stage, shall once again preside over the grill in her accustomed capacity as Grand Mistress of the Barbecue.</p>
     <p>Guests are earnestly entreated to contribute provisions of their choosing — victuals or libations, as their fancy dictates — that the table may be as abundantly furnished as our programmes. Arrangements for the coordination of comestibles shall be communicated in due course.</p>
   </div>
@@ -195,7 +195,7 @@ thumbnail: "/thumbnails/01-old-timey.png"
     <div class="ot-ornament">✦ ✦ ✦</div>
     <div class="ot-sig">The Boston Magic Lab</div>
     <div class="ot-fine">
-      Produced under the auspices of Felice &amp; the Founders<br>
+      Produced under the auspices of Felice &amp; the Production Staff<br>
     </div>
     <div class="ot-latin">In Ludis Magicis Veritas</div>
   </div>
