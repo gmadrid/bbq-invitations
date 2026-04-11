@@ -1,0 +1,97 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="RSVP">
+  <style>
+    .rsvp-wrap {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .rsvp-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+    }
+
+    .rsvp-title {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .rsvp-body {
+      font-size: 1rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      font-style: italic;
+    }
+
+    .rsvp-details {
+      border: var(--border-width) solid var(--border);
+      border-top: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+
+    .rsvp-details dt {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-top: 1rem;
+    }
+
+    .rsvp-details dt:first-child { margin-top: 0; }
+
+    .rsvp-details dd {
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .rsvp-placeholder {
+      border: 1px dashed var(--border);
+      padding: 2rem;
+      text-align: center;
+      color: var(--ink-muted);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+    }
+  </style>
+
+  <div class="rsvp-wrap">
+    <div class="rsvp-eyebrow">Boston Magic Lab · 2026</div>
+    <h1 class="rsvp-title">RSVP</h1>
+    <p class="rsvp-body">
+      We'd love to know you're coming. Jeannine would also love to know —
+      it helps with the coals.
+    </p>
+
+    <dl class="rsvp-details">
+      <dt>When</dt>
+      <dd>Sunday, May 17, 2026 · 1:00 PM</dd>
+      <dt>Where</dt>
+      <dd>70 Scituate Street, Arlington MA · Rear Garden</dd>
+      <dt>Bring</dt>
+      <dd>Food or drink to share · Coordination forthcoming</dd>
+      <dt>Presiding</dt>
+      <dd>Jeannine</dd>
+    </dl>
+
+    <div class="rsvp-placeholder">
+      RSVP form goes here.<br>
+      Drop in a Google Form embed, a Tally form, or anything you like.
+    </div>
+  </div>
+</Base>

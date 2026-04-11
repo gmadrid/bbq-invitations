@@ -1,0 +1,197 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const invitations = await getCollection('invitations');
+  return invitations.map(inv => ({
+    params: { slug: inv.slug },
+    props: { inv },
+  }));
+}
+
+const { inv } = Astro.props;
+const { Content } = await inv.render();
+---
+<Base
+  title={inv.data.style}
+  fonts={inv.data.fonts}
+  accentColor={inv.data.accentColor}
+>
+  <style>
+    .inv-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 3rem;
+    }
+
+    .inv-nav a { color: var(--ink-muted); }
+    .inv-nav a:hover { color: var(--accent); text-decoration: none; }
+    .inv-nav-sep { color: var(--border); }
+
+    .inv-header {
+      margin-bottom: 3rem;
+    }
+
+    .inv-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .inv-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .inv-date {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .inv-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* Text invitation styles */
+    .inv-text-body {
+      max-width: 680px;
+    }
+
+    .inv-text-body p {
+      margin-bottom: 1.2em;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--ink);
+    }
+
+    .inv-text-body em { font-style: italic; }
+    .inv-text-body strong { font-weight: 600; }
+
+    .inv-text-body h1,
+    .inv-text-body h2,
+    .inv-text-body h3 {
+      font-family: var(--font-display);
+      font-weight: 900;
+      margin: 2rem 0 0.75rem;
+      color: var(--ink);
+    }
+
+    .inv-text-body h1 { font-size: 2rem; }
+    .inv-text-body h2 { font-size: 1.5rem; }
+    .inv-text-body h3 { font-size: 1.2rem; }
+
+    .inv-text-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    .inv-text-body blockquote {
+      border-left: 2px solid var(--accent);
+      padding-left: 1.25rem;
+      margin: 1.5rem 0;
+      color: var(--ink-soft);
+      font-style: italic;
+    }
+
+    .inv-text-body pre,
+    .inv-text-body code {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      background: rgba(0,0,0,0.04);
+      padding: 0.15em 0.4em;
+    }
+
+    .inv-text-body pre {
+      padding: 1.25rem 1.5rem;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    /* HTML invitation wrapper */
+    .inv-html-body {
+      width: 100%;
+    }
+
+    /* Bottom nav */
+    .inv-footer-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    .inv-footer-nav a {
+      color: var(--ink-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .inv-footer-nav a:hover { color: var(--accent); text-decoration: none; }
+  </style>
+
+  <!-- Breadcrumb -->
+  <nav class="inv-nav">
+    <a href="/">All Styles</a>
+    <span class="inv-nav-sep">›</span>
+    <span>{inv.data.style}</span>
+  </nav>
+
+  <!-- Header -->
+  <div class="inv-header">
+    <div class="inv-eyebrow">Boston Magic Lab · End of Season BBQ · 2026</div>
+    <h1 class="inv-title">{inv.data.style}</h1>
+    <div class="inv-date">
+      {inv.data.date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+    </div>
+  </div>
+
+  <hr class="inv-divider" />
+
+  <!-- Content -->
+  {inv.data.type === 'text'
+    ? (
+      <div class="inv-text-body">
+        <Content />
+      </div>
+    )
+    : (
+      <div class="inv-html-body">
+        <Content />
+      </div>
+    )
+  }
+
+  <!-- Footer nav -->
+  <div class="inv-footer-nav">
+    <a href="/">← All Styles</a>
+    <a href="/rsvp">RSVP →</a>
+  </div>
+</Base>
