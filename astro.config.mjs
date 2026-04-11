@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://gmadrid.github.io',
-  base: '/bbq-invitations',
+  site: 'https://bml-2026.party',
 });
