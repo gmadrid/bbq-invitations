@@ -195,7 +195,7 @@ thumbnail: "/thumbnails/01-old-timey.png"
     <div class="ot-ornament">✦ ✦ ✦</div>
     <div class="ot-sig">The Boston Magic Lab</div>
     <div class="ot-fine">
-      Produced under the auspices of Felice &amp; the Production Staff<br>
+      Produced under the auspices of Felice &amp; the Esteemed Founders<br>
     </div>
     <div class="ot-latin">In Ludis Magicis Veritas</div>
   </div>
