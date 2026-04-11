@@ -4,9 +4,10 @@ import { getCollection, getEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const invitations = await getCollection('invitations');
+  const isDev = import.meta.env.DEV;
   const today = new Date();
   today.setUTCHours(23, 59, 59, 999);
-  const published = invitations.filter(inv => inv.data.date <= today);
+  const published = isDev ? invitations : invitations.filter(inv => inv.data.date <= today);
   return published.map(inv => ({
     params: { slug: inv.slug },
     props: { inv },
