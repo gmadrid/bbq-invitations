@@ -1,7 +1,7 @@
 ---
 title: "New York Times"
 style: "New York Times Front Page"
-date: 2026-04-13
+date: 2026-04-12
 type: text
 fonts: ["Playfair+Display:wght@400;700;900", "Libre+Baskerville:ital@0;1"]
 thumbnail: "/thumbnails/04-nyt.png"

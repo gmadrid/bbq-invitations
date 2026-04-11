@@ -1,7 +1,7 @@
 ---
 title: "Mexican/Cajun Menu"
 style: "Mexican/Cajun Restaurant Menu"
-date: 2026-04-18
+date: 2026-04-17
 type: html
 fonts: ["Playfair+Display:ital,wght@0,700;1,400", "Libre+Baskerville:ital@0;1"]
 accentColor: "#1a0a00"

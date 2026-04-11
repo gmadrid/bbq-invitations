@@ -1,7 +1,7 @@
 ---
 title: "Eviction Notice"
 style: "Eviction Notice"
-date: 2026-04-17
+date: 2026-04-16
 type: html
 fonts: []
 accentColor: "#0a0a2a"

@@ -1,7 +1,7 @@
 ---
 title: "Cookbook Recipe"
 style: "Cookbook Recipe"
-date: 2026-04-15
+date: 2026-04-14
 type: text
 fonts: ["DM+Serif+Display&family=Source+Serif+4:ital,wght@0,400;0,700;1,400"]
 accentColor: "#8a4a00"

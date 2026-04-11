@@ -1,7 +1,7 @@
 ---
 title: "Cereal Box"
 style: "Cereal Box Ingredient List"
-date: 2026-04-16
+date: 2026-04-15
 type: html
 fonts: []
 accentColor: "#0033aa"
