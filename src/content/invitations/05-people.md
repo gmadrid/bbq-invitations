@@ -1,12 +1,21 @@
 ---
 title: "People Magazine"
 style: "People Magazine"
-date: 2026-05-05
+date: 2026-04-14
 type: text
-fonts: []
+fonts: ["Source+Sans+3:ital,wght@0,400;0,600;1,400"]
 accentColor: "#c8200a"
 teaser: "Inside the backyard bash everyone is talking about."
+thumbnail: "/thumbnails/05-people.png"
 ---
+
+<style>
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Anton', Impact, sans-serif; font-weight: normal; font-style: normal; text-transform: uppercase; }
+.inv-text-body h1 { font-size: 1.8rem; line-height: 1.2; }
+.inv-text-body h2 { font-size: 1.1rem; line-height: 1.4; font-family: 'Source Sans 3', sans-serif; font-weight: 400; font-style: italic; text-transform: none; color: var(--ink-soft); }
+.inv-text-body p { font-family: 'Libre Baskerville', Georgia, serif; }
+.inv-text-body strong { font-family: 'Anton', Impact, sans-serif; font-weight: normal; font-size: 1.1em; }
+</style>
 
 **PEOPLE**
 
@@ -32,7 +41,7 @@ They're having a cookout.
 
 "It's our tradition," says one insider, who spoke exclusively to PEOPLE on the condition that we describe them as "radiant," which, honestly, they are. "Every year after the last show, we get together. It's the thing we look forward to most."
 
-The gathering, set for Sunday, May 17th at the home of the Founders — a charming Arlington, Massachusetts property that a source describes as "very them, very warm, very real" — is expected to draw the full Magic Lab family and their nearest and dearest. And if the buzz is any indication, this year's edition may be the most anticipated yet.
+The gathering, set for Sunday, May 17th at the stunning home of one of the inner circle — a charming Arlington, Massachusetts property that a source describes as "very them, very warm, very real" — is expected to draw the full Magic Lab family and their nearest and dearest. And if the buzz is any indication, this year's edition may be the most anticipated yet.
 
 **The Love Story at the Center of It All**
 
@@ -44,7 +53,7 @@ Her name is Jeannine, and if you haven't heard of her yet, consider this your in
 
 Known affectionately within the group as the BBQ Dad — a title she has neither sought nor relinquished — Jeannine brings to the fire what the Lab brings to the stage: precision, passion, and a certain ineffable *it* that cannot be taught. She has presided over this annual feast for years, and her return Sunday is, multiple sources confirm, the detail people are most excited about.
 
-"The show is wonderful," says another insider. "But Jeannine's ribs? That's the main event."
+"The show is wonderful," says another insider. "But Jeannine's burgers? That's the main event."
 
 She was not available for comment. She was, we are told, already thinking about the menu. We respect that.
 
@@ -52,7 +61,7 @@ She was not available for comment. She was, we are told, already thinking about 
 
 Behind every iconic gathering is an iconic organizer, and at the Boston Magic Lab, that person is Felice, the group's executive producer and, by all accounts, the one who makes sure everything actually happens.
 
-"Felice is — " says one source, trailing off in a manner that suggests the sentence could go on for a very long time. "Felice is *Felice.* You know?"
+"Felice is — " says one source, trailing off in a manner that suggests the sentence could go on for a very long time. "Felice is *Just Felice.* You know?"
 
 We do know.
 
@@ -68,7 +77,7 @@ Guests are expected to arrive at one o'clock in the afternoon. Parking, as with 
 
 **The Moment Everyone's Waiting For**
 
-"We work really hard," says one founding member, who asked to be described only as "one of the Founders, looking great." "And then we get to do *this.* We get to be with our people. We get to eat Jeannine's food. It never gets old."
+"We work really hard," says one founding member, who asked to be described only as "one of the founding members, looking great." "And then we get to do *this.* We get to be with our people. We get to eat Jeannine's food. It never gets old."
 
 It never does.
 
