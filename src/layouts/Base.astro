@@ -80,6 +80,7 @@ const googleFontsUrl = fonts.length > 0
 
     .site-nav {
       display: flex;
+      align-items: center;
       gap: 2rem;
       font-family: var(--font-mono);
       font-size: 12px;
@@ -89,6 +90,17 @@ const googleFontsUrl = fonts.length > 0
 
     .site-nav a { color: #777777; text-decoration: none; }
     .site-nav a:hover { color: var(--accent); text-decoration: none; }
+
+    .site-nav .nav-cta {
+      background: #7c3aed;
+      color: #ffffff;
+      padding: 4px 12px;
+      letter-spacing: 0.14em;
+    }
+    .site-nav .nav-cta:hover {
+      opacity: 0.88;
+      color: #ffffff;
+    }
 
     main {
       max-width: var(--max-width);
@@ -134,8 +146,8 @@ const googleFontsUrl = fonts.length > 0
   <header class="site-header">
     <a href={base} class="site-logo">BBQ<span class="site-logo-dot">.</span>INVITATIONS</a>
     <nav class="site-nav">
-      <a href={`${base}#styles`}>All Styles</a>
-      <a href={`${base}rsvp`}>RSVP</a>
+      <a href={`${base}#styles`}>All Invitations</a>
+      <a href={`${base}rsvp`} class="nav-cta">RSVP</a>
     </nav>
   </header>
 
