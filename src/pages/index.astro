@@ -184,6 +184,8 @@ const sorted = invitations.sort((a, b) => a.data.date.valueOf() - b.data.date.va
       align-items: flex-end;
       padding: 0.75rem;
       transition: background 0.12s;
+      position: relative;
+      overflow: hidden;
     }
 
     .grid-thumb-label {
@@ -298,14 +300,14 @@ const sorted = invitations.sort((a, b) => a.data.date.valueOf() - b.data.date.va
         >
           {inv.data.thumbnail
             ? <img src={inv.data.thumbnail} alt={inv.data.style}
-                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
-            : null}
-          <span
-            class="grid-thumb-label"
-            style={`color: ${inv.data.accentColor ? '#ffffff' : '#ffffff'};`}
-          >
-            {inv.data.style}
-          </span>
+                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;" />
+            : <span
+                class="grid-thumb-label"
+                style={`color: ${inv.data.accentColor ? '#ffffff' : '#ffffff'};`}
+              >
+                {inv.data.style}
+              </span>
+          }
         </div>
         <div class="grid-info">
           <div class="grid-card-title">{inv.data.style}</div>
