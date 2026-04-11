@@ -77,7 +77,9 @@ import Base from '../layouts/Base.astro';
     .rsvp-field input,
     .rsvp-field select,
     .rsvp-field textarea {
+      display: block;
       width: 100%;
+      box-sizing: border-box;
       font-family: var(--font-body);
       font-size: 1rem;
       padding: 0.6rem 0.75rem;
@@ -85,6 +87,8 @@ import Base from '../layouts/Base.astro';
       background: var(--bg);
       color: var(--ink);
       outline: none;
+      -webkit-appearance: none;
+      appearance: none;
     }
 
     .rsvp-field input:focus,
