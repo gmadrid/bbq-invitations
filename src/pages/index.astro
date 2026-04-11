@@ -3,7 +3,10 @@ import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
 
 const invitations = await getCollection('invitations');
-const sorted = invitations.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+const today = new Date();
+today.setUTCHours(23, 59, 59, 999);
+const published = invitations.filter(inv => inv.data.date <= today);
+const sorted = published.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base title="BBQ Invitations">
