@@ -58,15 +58,86 @@ import Base from '../layouts/Base.astro';
       margin: 0;
     }
 
-    .rsvp-placeholder {
-      border: 1px dashed var(--border);
-      padding: 2rem;
-      text-align: center;
-      color: var(--ink-muted);
+    .rsvp-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .rsvp-field label {
+      display: block;
       font-family: var(--font-mono);
-      font-size: 0.8rem;
-      line-height: 1.8;
-      letter-spacing: 0.05em;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .rsvp-field input,
+    .rsvp-field select,
+    .rsvp-field textarea {
+      width: 100%;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      padding: 0.6rem 0.75rem;
+      border: var(--border-width) solid var(--border);
+      background: var(--bg);
+      color: var(--ink);
+      outline: none;
+    }
+
+    .rsvp-field input:focus,
+    .rsvp-field select:focus,
+    .rsvp-field textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .rsvp-field textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .rsvp-radio-group {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.3rem;
+    }
+
+    .rsvp-radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--ink);
+      letter-spacing: 0;
+      text-transform: none;
+      cursor: pointer;
+    }
+
+    .rsvp-radio-group input[type="radio"] {
+      width: auto;
+      accent-color: var(--accent);
+    }
+
+    .rsvp-submit {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      padding: 12px 28px;
+      border: none;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: opacity 0.1s;
+    }
+
+    .rsvp-submit:hover {
+      opacity: 0.88;
     }
   </style>
 
@@ -89,8 +160,48 @@ import Base from '../layouts/Base.astro';
       <dd>Jeannine</dd>
     </dl>
 
-    <div class="rsvp-placeholder">
-      RSVP form will go go here.
-    </div>
+    <form class="rsvp-form" action="https://formspree.io/f/mqegryze" method="POST">
+      <div class="rsvp-field">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="rsvp-field">
+        <label>Are You Coming?</label>
+        <div class="rsvp-radio-group">
+          <label><input type="radio" name="attending" value="yes" required /> Yes</label>
+          <label><input type="radio" name="attending" value="no" /> Regretfully, no</label>
+        </div>
+      </div>
+
+      <div class="rsvp-field">
+        <label for="guests">Total Guests (Including You)</label>
+        <select id="guests" name="guests">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5+">5+</option>
+        </select>
+      </div>
+
+      <div class="rsvp-field">
+        <label for="kids">Any Kids?</label>
+        <select id="kids" name="kids">
+          <option value="0">No kids</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4+">4+</option>
+        </select>
+      </div>
+
+      <div class="rsvp-field">
+        <label for="dietary">Dietary Restrictions (Optional)</label>
+        <input type="text" id="dietary" name="dietary" placeholder="Vegetarian, allergies, etc." />
+      </div>
+
+      <button type="submit" class="rsvp-submit">RSVP →</button>
+    </form>
   </div>
 </Base>

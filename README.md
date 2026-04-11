@@ -94,20 +94,12 @@ Without a thumbnail, the grid card shows the style name as text on the accent co
 
 ## RSVP Form
 
-Edit `src/pages/rsvp.astro`. There's a placeholder div where the form goes. Drop in a Google Form embed, a Tally embed, or anything you like:
+The RSVP form is powered by [Formspree](https://formspree.io). Submissions go to:
 
-```html
-<!-- Google Form embed -->
-<iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
-  width="100%" height="600" frameborder="0">
-</iframe>
+- **View submissions:** https://formspree.io/forms/mqegryze/submissions
+- **Form endpoint:** `https://formspree.io/f/mqegryze`
 
-<!-- Or Tally -->
-<iframe data-tally-src="https://tally.so/embed/YOUR_FORM_ID"
-  width="100%" height="400">
-</iframe>
-<script src="https://tally.so/widgets/embed.js" async></script>
-```
+The form is built with the site's design system in `src/pages/rsvp.astro`.
 
 ## Project Structure
 
