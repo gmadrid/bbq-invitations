@@ -136,6 +136,21 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
     .bbq-rsvp:hover { opacity: 0.88; text-decoration: none; }
 
+    .bbq-food-link {
+      display: inline-block;
+      align-self: flex-start;
+      font-family: var(--font-display);
+      font-size: 24px;
+      letter-spacing: 0.1em;
+      padding: 12px 28px;
+      border: var(--border-width) solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      margin-top: 0.75rem;
+      transition: opacity 0.1s;
+    }
+    .bbq-food-link:hover { background: rgba(124, 58, 237, 0.12); text-decoration: none; }
+
     /* ── Grid ── */
     .grid-header {
       display: flex;
@@ -286,6 +301,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         <div class="bbq-detail-val">The Magic Lab Production Staff</div>
       </div>
       <a href={`${base}rsvp`} class="bbq-rsvp">RSVP →</a>
+      <a href="https://docs.google.com/spreadsheets/d/18zLxT9jaC_YKmOs_uVOfjZiBkxApp-xc0FCXDg3vMcQ/edit?usp=sharing" class="bbq-food-link" target="_blank">Food Sign-Up Sheet →</a>
     </div>
   </section>
 
