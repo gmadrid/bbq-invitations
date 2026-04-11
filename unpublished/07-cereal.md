@@ -123,20 +123,16 @@ teaser: "Now fortified with fellowship. Serving size: one backyard barbecue."
         † Coordination of guest provisions forthcoming. Watch this space.
       </div>
     </div>
-
     <div class="cereal-fortified">
       <strong>Now Fortified With:</strong>
       Gratitude · Good Company · Rear Garden · One Full Season of Magic
     </div>
-
     <div class="cereal-ingredients">
       <strong>Ingredients:</strong> Magic Lab (whole, assembled over one season), Jeannine (presiding, grill-ready), Felice (executive grade, fully activated), Founders (to taste), Friends (assorted, invited), Rear Garden (70 Scituate Street, Arlington MA), May Afternoon (one, the 17th), Coals (sufficient), Smoke (aromatic), Food (guest-supplied, TBD), Drink (likewise), Fellowship (unbounded), That Particular Light That Comes Into A Garden When Everything Is Finished And Everyone You Want To Be With Is There (1 unit, non-negotiable). <em>Contains: joy. May contain: mild sentimentality near the end of the afternoon.</em>
     </div>
-
     <div class="cereal-allergen">
       <strong>Allergen info:</strong> Contains <strong>fellowship</strong>. Produced in a facility that also processes <strong>wonder, gratitude,</strong> and <strong>Jeannine's cooking</strong>, which is an allergen only in the sense that once exposed you will find all other barbecues insufficient.
     </div>
-
     <div class="cereal-upc-row">
       <div class="cereal-upc-text">
         Distributed by the Boston Magic Lab<br>
