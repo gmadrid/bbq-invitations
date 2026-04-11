@@ -122,8 +122,32 @@ import Base from '../layouts/Base.astro';
     }
 
     .rsvp-radio-group input[type="radio"] {
-      width: auto;
-      accent-color: var(--accent);
+      width: 16px;
+      height: 16px;
+      appearance: none;
+      -webkit-appearance: none;
+      border: var(--border-width) solid var(--border);
+      border-radius: 50%;
+      background: var(--bg);
+      cursor: pointer;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .rsvp-radio-group input[type="radio"]:checked {
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    .rsvp-radio-group input[type="radio"]:checked::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 6px;
+      height: 6px;
+      background: #ffffff;
+      border-radius: 50%;
     }
 
     .rsvp-submit {
@@ -142,6 +166,77 @@ import Base from '../layouts/Base.astro';
 
     .rsvp-submit:hover {
       opacity: 0.88;
+    }
+
+    .rsvp-thanks {
+      display: none;
+    }
+
+    .rsvp-thanks.visible {
+      display: block;
+    }
+
+    .rsvp-thanks-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .rsvp-thanks-body {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .rsvp-thanks-food {
+      border: var(--border-width) solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .rsvp-thanks-food-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .rsvp-thanks-food-body {
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .rsvp-thanks-food-link {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      padding: 10px 24px;
+      text-decoration: none;
+      transition: opacity 0.1s;
+    }
+
+    .rsvp-thanks-food-link:hover {
+      opacity: 0.88;
+      text-decoration: none;
+    }
+
+    .rsvp-error {
+      display: none;
+      color: #cc0000;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      margin-top: 0.5rem;
     }
   </style>
 
@@ -164,7 +259,7 @@ import Base from '../layouts/Base.astro';
       <dd>Jeannine</dd>
     </dl>
 
-    <form class="rsvp-form" action="https://formspree.io/f/mqegryze" method="POST">
+    <form class="rsvp-form" id="rsvp-form">
       <div class="rsvp-field">
         <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required />
@@ -206,6 +301,52 @@ import Base from '../layouts/Base.astro';
       </div>
 
       <button type="submit" class="rsvp-submit">RSVP →</button>
+      <div class="rsvp-error" id="rsvp-error">Something went wrong. Please try again.</div>
     </form>
+
+    <div class="rsvp-thanks" id="rsvp-thanks">
+      <h2 class="rsvp-thanks-title">You're In.</h2>
+      <p class="rsvp-thanks-body">
+        Jeannine has been notified. The coals are warming.
+      </p>
+      <div class="rsvp-thanks-food">
+        <div class="rsvp-thanks-food-label">One More Thing</div>
+        <p class="rsvp-thanks-food-body">
+          While you're here — take a look at the food sign-up sheet.<br/>
+          Grab a slot, claim a dish.<br/>
+          We'd like to avoid a repeat of the year we only got 27 bags of Sour Cream and Onion Ruffles,
+          one tube of Pringles, and a 20oz bottle of Diet Caffeine-free Mountain Dew.
+        </p>
+        <a href="https://docs.google.com/spreadsheets/d/18zLxT9jaC_YKmOs_uVOfjZiBkxApp-xc0FCXDg3vMcQ/edit?usp=sharing" class="rsvp-thanks-food-link" target="_blank">Food Sign-Up →</a>
+      </div>
+    </div>
   </div>
+
+  <script>
+    const form = document.getElementById('rsvp-form');
+    const thanks = document.getElementById('rsvp-thanks');
+    const error = document.getElementById('rsvp-error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      error.style.display = 'none';
+
+      try {
+        const res = await fetch('https://formspree.io/f/mqegryze', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' },
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          thanks.classList.add('visible');
+        } else {
+          error.style.display = 'block';
+        }
+      } catch {
+        error.style.display = 'block';
+      }
+    });
+  </script>
 </Base>
