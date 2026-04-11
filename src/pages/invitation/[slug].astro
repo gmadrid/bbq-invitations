@@ -170,7 +170,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     <div class="inv-eyebrow">Boston Magic Lab · End of Season BBQ · 2026</div>
     <h1 class="inv-title">{inv.data.style}</h1>
     <div class="inv-date">
-      {inv.data.date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+      {inv.data.date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}
     </div>
   </div>
 
