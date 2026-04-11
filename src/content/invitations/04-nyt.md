@@ -1,12 +1,18 @@
 ---
 title: "New York Times"
 style: "New York Times Front Page"
-date: 2026-05-04
+date: 2026-04-13
 type: text
-fonts: ["Libre+Baskerville:ital@0;1"]
+fonts: ["Playfair+Display:wght@400;700;900", "Libre+Baskerville:ital@0;1"]
+thumbnail: "/thumbnails/04-nyt.png"
 accentColor: "#1a1a1a"
 teaser: "Analysts monitoring situation in Arlington closely."
 ---
+
+<style>
+.inv-text-body { font-family: 'Libre Baskerville', Georgia, serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-style: normal; }
+</style>
 
 **THE NEW YORK TIMES**
 
