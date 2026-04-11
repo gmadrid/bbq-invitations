@@ -1,7 +1,7 @@
 ---
 title: "The Old-Timey Invitation"
 style: "Old-Timey Invitation"
-date: 2026-05-01
+date: 2026-04-08
 type: html
 fonts: ["UnifrakturMaguntia", "IM+Fell+English:ital@0;1"]
 accentColor: "#2a1200"
