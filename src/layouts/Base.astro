@@ -7,6 +7,8 @@ interface Props {
 
 const { title, fonts = [], accentColor = '#7c3aed' } = Astro.props;
 
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+
 const googleFontsUrl = fonts.length > 0
   ? `https://fonts.googleapis.com/css2?${fonts.map(f => `family=${f.replace(/ /g, '+')}`).join('&')}&display=swap`
   : null;
@@ -130,10 +132,10 @@ const googleFontsUrl = fonts.length > 0
 </head>
 <body>
   <header class="site-header">
-    <a href="/" class="site-logo">BBQ<span class="site-logo-dot">.</span>INVITATIONS</a>
+    <a href={base} class="site-logo">BBQ<span class="site-logo-dot">.</span>INVITATIONS</a>
     <nav class="site-nav">
-      <a href="/#styles">All Styles</a>
-      <a href="/rsvp">RSVP</a>
+      <a href={`${base}#styles`}>All Styles</a>
+      <a href={`${base}rsvp`}>RSVP</a>
     </nav>
   </header>
 

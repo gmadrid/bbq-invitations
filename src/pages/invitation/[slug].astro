@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 
 const { inv } = Astro.props;
 const { Content } = await inv.render();
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base
   title={inv.data.style}
@@ -159,7 +160,7 @@ const { Content } = await inv.render();
 
   <!-- Breadcrumb -->
   <nav class="inv-nav">
-    <a href="/">All Styles</a>
+    <a href={`${base}#styles`}>All Styles</a>
     <span class="inv-nav-sep">›</span>
     <span>{inv.data.style}</span>
   </nav>
@@ -191,7 +192,7 @@ const { Content } = await inv.render();
 
   <!-- Footer nav -->
   <div class="inv-footer-nav">
-    <a href="/">← All Styles</a>
-    <a href="/rsvp">RSVP →</a>
+    <a href={`${base}#styles`}>← All Styles</a>
+    <a href={`${base}rsvp`}>RSVP →</a>
   </div>
 </Base>

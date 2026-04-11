@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 
 const invitations = await getCollection('invitations');
 const sorted = invitations.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base title="BBQ Invitations">
   <style>
@@ -238,8 +239,7 @@ const sorted = invitations.sort((a, b) => a.data.date.valueOf() - b.data.date.va
       </h1>
       <p class="hero-sub">
         The same invitation to the same backyard BBQ —
-        written in every style imaginable.
-        One new version, every day.
+        written in every style I can manage.
       </p>
     </div>
   </section>
@@ -279,9 +279,9 @@ const sorted = invitations.sort((a, b) => a.data.date.valueOf() - b.data.date.va
       </p>
       <div class="bbq-detail">
         <div class="bbq-detail-label">Produced by</div>
-        <div class="bbq-detail-val">Felice & the Founders</div>
+        <div class="bbq-detail-val">The Magic Lab Production Staff</div>
       </div>
-      <a href="/rsvp" class="bbq-rsvp">RSVP →</a>
+      <a href={`${base}rsvp`} class="bbq-rsvp">RSVP →</a>
     </div>
   </section>
 
@@ -293,13 +293,13 @@ const sorted = invitations.sort((a, b) => a.data.date.valueOf() - b.data.date.va
 
   <div class="grid">
     {sorted.map(inv => (
-      <a href={`/invitation/${inv.slug}`} class="grid-card">
+      <a href={`${base}invitation/${inv.slug}`} class="grid-card">
         <div
           class="grid-thumb"
           style={`background: ${inv.data.accentColor ?? '#1a1a1a'};`}
         >
           {inv.data.thumbnail
-            ? <img src={inv.data.thumbnail} alt={inv.data.style}
+            ? <img src={`${base}${inv.data.thumbnail.replace(/^\//, '')}`} alt={inv.data.style}
                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;" />
             : <span
                 class="grid-thumb-label"
