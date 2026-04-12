@@ -65,7 +65,18 @@ const googleFontsUrl = fonts.length > 0
       top: 0;
       background: var(--bg);
       z-index: 100;
+      transition: background 0.2s, border-color 0.2s;
     }
+
+    .site-header.scrolled {
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .site-header.scrolled .site-logo { color: var(--bg); }
+    .site-header.scrolled .site-nav a { color: #999; }
+    .site-header.scrolled .site-nav a:hover { color: var(--accent); }
+    .site-header.scrolled .nav-cta { background: var(--accent); color: #fff; }
 
     .site-logo {
       font-family: var(--font-display);
@@ -160,5 +171,12 @@ const googleFontsUrl = fonts.length > 0
     <div class="site-footer-left">Boston Magic Lab · Felice & the Production Staff · 2026</div>
     <div class="site-footer-right">Jeannine at the grill.</div>
   </footer>
+
+  <script>
+    const header = document.querySelector('.site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
 </body>
 </html>
