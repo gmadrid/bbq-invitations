@@ -37,6 +37,7 @@ const googleFontsUrl = fonts.length > 0
 
     :root {
       --accent:       var(--accentColor);
+      --brand:        #7c3aed;
       --bg:           #ffffff;
       --ink:          #0a0a0a;
       --ink-trans:    #0a0a0add;
@@ -86,7 +87,7 @@ const googleFontsUrl = fonts.length > 0
     .site-header.scrolled .site-logo { color: var(--bg); }
     .site-header.scrolled .site-nav a { color: #999; }
     .site-header.scrolled .site-nav a:hover { color: var(--accent); }
-    .site-header.scrolled .nav-cta { background: #7c3aed; color: #ccc !important; }
+    .site-header.scrolled .nav-cta { background: var(--brand); color: #ccc !important; }
 
     .site-logo {
       font-family: var(--font-display);
@@ -113,7 +114,7 @@ const googleFontsUrl = fonts.length > 0
     .site-nav a:hover { color: var(--accent); text-decoration: none; }
 
     .site-nav .nav-cta {
-      background: #7c3aed;
+      background: var(--brand);
       color: #ffffff;
       padding: 4px 12px;
       letter-spacing: 0.14em;
@@ -185,9 +186,11 @@ const googleFontsUrl = fonts.length > 0
 
   <script>
     const header = document.querySelector('.site-header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 10);
-    });
+    if (header) {
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 10);
+      }, { passive: true });
+    }
   </script>
 </body>
 </html>
