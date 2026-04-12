@@ -1,12 +1,18 @@
 ---
-title: "Donald Trump"
-style: "Donald Trump"
+title: "45/47"
+style: "45/47"
 date: 2026-05-02
 type: text
-fonts: []
+fonts: ["Cinzel:ital,wght@0,400;0,700;1,400"]
 accentColor: "#c8200a"
 teaser: "The most important barbecue — maybe ever. In the history of barbecues."
+thumbnail: "/thumbnails/24-trump.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Cinzel', Arial, sans-serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Cinzel', Arial, sans-serif; }
+</style>
 
 *[delivered at a podium, in a very large room, to people wearing hats]*
 
