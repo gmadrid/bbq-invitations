@@ -17,7 +17,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     /* ── Hero ── */
     .hero {
       padding: 5rem 0 4rem;
-      border-bottom: 2px solid var(--border);
+      border-bottom: var(--border-width) solid var(--border);
       position: relative;
       overflow: hidden;
       margin-bottom: 0;
@@ -130,17 +130,17 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     .bbq-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      border-bottom: 2px solid var(--border);
+      border-bottom: var(--border-width) solid var(--border);
     }
 
     @media (max-width: 600px) {
       .bbq-section { grid-template-columns: 1fr; }
-      .bbq-right { border-left: none; border-top: 2px solid var(--border); }
+      .bbq-right { border-left: none; border-top: var(--border-width) solid var(--border); }
     }
 
     .bbq-left {
       padding: 2.5rem 0 2.5rem;
-      border-right: 2px solid var(--border);
+      border-right: var(--border-width) solid var(--border);
       padding-right: 2rem;
     }
 
@@ -275,14 +275,14 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      border-left: 2px solid var(--border);
+      border-left: var(--border-width) solid var(--border);
       margin-top: 0;
     }
 
     .grid-card {
       display: block;
-      border-right: 2px solid var(--border);
-      border-bottom: 2px solid var(--border);
+      border-right: var(--border-width) solid var(--border);
+      border-bottom: var(--border-width) solid var(--border);
       color: var(--ink);
       text-decoration: none;
       transition: background 0.12s;
@@ -448,7 +448,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
           style={`background: ${inv.data.accentColor ?? '#1a1a1a'};`}
         >
           {inv.data.thumbnail
-            ? <img src={`${base}${inv.data.thumbnail.replace(/^\//, '')}`} alt={inv.data.style}
+            ? <img src={`${base}${inv.data.thumbnail.replace(/^\//, '')}`} alt={inv.data.style} loading="lazy"
                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;" />
             : <span
                 class="grid-thumb-label"

@@ -161,7 +161,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   </style>
 
   <!-- Breadcrumb -->
-  <nav class="inv-nav">
+  <nav class="inv-nav" aria-label="Breadcrumb">
     <a href={`${base}#styles`}>All Invitations</a>
     <span class="inv-nav-sep">›</span>
     <span>{inv.data.style}</span>

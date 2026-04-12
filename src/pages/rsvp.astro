@@ -248,6 +248,16 @@ import { EVENT } from '../config';
       text-decoration: none;
     }
 
+    .rsvp-attending-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .rsvp-attending-fields.hidden {
+      display: none;
+    }
+
     .rsvp-error {
       display: none;
       color: #cc0000;
@@ -290,26 +300,28 @@ import { EVENT } from '../config';
         </div>
       </fieldset>
 
-      <div class="rsvp-field">
-        <label for="guests">Total Guests (Including You)</label>
-        <select id="guests" name="guests">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5+">5+</option>
-        </select>
-      </div>
+      <div class="rsvp-attending-fields" id="rsvp-attending-fields">
+        <div class="rsvp-field">
+          <label for="guests">Total Guests (Including You)</label>
+          <select id="guests" name="guests">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5+">5+</option>
+          </select>
+        </div>
 
-      <div class="rsvp-field">
-        <label for="kids">Any Kids?</label>
-        <select id="kids" name="kids">
-          <option value="0">No kids</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4+">4+</option>
-        </select>
+        <div class="rsvp-field">
+          <label for="kids">Any Kids?</label>
+          <select id="kids" name="kids">
+            <option value="0">No kids</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4+">4+</option>
+          </select>
+        </div>
       </div>
 
       <div class="rsvp-field">
@@ -351,6 +363,13 @@ import { EVENT } from '../config';
     const thanks = document.getElementById('rsvp-thanks');
     const regrets = document.getElementById('rsvp-regrets');
     const error = document.getElementById('rsvp-error');
+    const attendingFields = document.getElementById('rsvp-attending-fields');
+
+    form.querySelectorAll('input[name="attending"]').forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        attendingFields.classList.toggle('hidden', e.target.value !== 'yes');
+      });
+    });
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();

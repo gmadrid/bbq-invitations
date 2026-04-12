@@ -3,7 +3,7 @@ title: "New York Times"
 style: "New York Times Front Page"
 date: 2026-04-12
 type: text
-fonts: ["Playfair+Display:wght@400;700;900", "Libre+Baskerville:ital@0;1"]
+fonts: ["Playfair+Display:wght@400;700;900"]
 thumbnail: "/thumbnails/04-nyt.png"
 accentColor: "#1a1a1a"
 teaser: "Analysts monitoring situation in Arlington closely."
