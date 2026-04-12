@@ -254,7 +254,8 @@ import { EVENT } from '../config';
       gap: 1.5rem;
     }
 
-    .rsvp-attending-fields.hidden {
+    .rsvp-attending-fields.hidden,
+    .rsvp-form.hidden {
       display: none;
     }
 
@@ -264,6 +265,10 @@ import { EVENT } from '../config';
       font-family: var(--font-mono);
       font-size: 12px;
       margin-top: 0.5rem;
+    }
+
+    .rsvp-error.visible {
+      display: block;
     }
   </style>
 
@@ -373,7 +378,7 @@ import { EVENT } from '../config';
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      error.style.display = 'none';
+      error.classList.remove('visible');
 
       const data = new FormData(form);
       const attending = data.get('attending') === 'yes';
@@ -386,13 +391,13 @@ import { EVENT } from '../config';
         });
 
         if (res.ok) {
-          form.style.display = 'none';
+          form.classList.add('hidden');
           (attending ? thanks : regrets).classList.add('visible');
         } else {
-          error.style.display = 'block';
+          error.classList.add('visible');
         }
       } catch {
-        error.style.display = 'block';
+        error.classList.add('visible');
       }
     });
   </script>
