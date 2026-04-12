@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { EVENT } from '../config';
 ---
 <Base title="RSVP">
   <style>
@@ -100,6 +101,22 @@ import Base from '../layouts/Base.astro';
     .rsvp-field textarea {
       resize: vertical;
       min-height: 80px;
+    }
+
+    .rsvp-fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .rsvp-legend {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.4rem;
+      padding: 0;
     }
 
     .rsvp-radio-group {
@@ -250,9 +267,9 @@ import Base from '../layouts/Base.astro';
 
     <dl class="rsvp-details">
       <dt>When</dt>
-      <dd>Sunday, May 17, 2026 · 1:00 PM</dd>
+      <dd>{EVENT.date}</dd>
       <dt>Where</dt>
-      <dd>70 Scituate Street, Arlington MA · Rear Garden</dd>
+      <dd>{EVENT.address} · {EVENT.addressLine2}</dd>
       <dt>Bring</dt>
       <dd>Food or drink to share · Coordination forthcoming</dd>
       <dt>BBQ Dad</dt>
@@ -265,13 +282,13 @@ import Base from '../layouts/Base.astro';
         <input type="text" id="name" name="name" required />
       </div>
 
-      <div class="rsvp-field">
-        <label>Are You Coming?</label>
+      <fieldset class="rsvp-field rsvp-fieldset">
+        <legend class="rsvp-legend">Are You Coming?</legend>
         <div class="rsvp-radio-group">
           <label><input type="radio" name="attending" value="yes" required /> Yes</label>
           <label><input type="radio" name="attending" value="no" /> Regretfully, no</label>
         </div>
-      </div>
+      </fieldset>
 
       <div class="rsvp-field">
         <label for="guests">Total Guests (Including You)</label>
@@ -317,7 +334,7 @@ import Base from '../layouts/Base.astro';
           We'd like to avoid a repeat of the year we only got 27 bags of Sour Cream and Onion Ruffles,
           one tube of Pringles, and a 20oz bottle of Diet Caffeine-free Mountain Dew.
         </p>
-        <a href="https://docs.google.com/spreadsheets/d/18zLxT9jaC_YKmOs_uVOfjZiBkxApp-xc0FCXDg3vMcQ/edit?usp=sharing" class="rsvp-thanks-food-link" target="_blank" rel="noopener noreferrer">Food Sign-Up →</a>
+        <a href={EVENT.foodSignupUrl} class="rsvp-thanks-food-link" target="_blank" rel="noopener noreferrer">Food Sign-Up →</a>
       </div>
     </div>
 

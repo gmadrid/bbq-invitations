@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getPublishedInvitations } from '../utils';
-import { photosPublished } from '../config';
+import { photosPublished, EVENT } from '../config';
 
 const published = await getPublishedInvitations();
 const sorted = published.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
@@ -386,11 +386,11 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
       <div class="bbq-detail">
         <div class="bbq-detail-label">When</div>
-        <div class="bbq-detail-val">Sunday, May 17, 2026 · 1:00 PM</div>
+        <div class="bbq-detail-val">{EVENT.date}</div>
       </div>
       <div class="bbq-detail">
         <div class="bbq-detail-label">Where</div>
-        <div class="bbq-detail-val">70 Scituate Street, Arlington MA<br>Rear Garden</div>
+        <div class="bbq-detail-val">{EVENT.address}<br>{EVENT.addressLine2}</div>
       </div>
       <div class="bbq-detail">
         <div class="bbq-detail-label">Who</div>
@@ -415,7 +415,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
             The smoke has cleared, the coals are cold,
             and the pictures are in.
           </p>
-          <a href="https://photos.app.goo.gl/VzE7Xd5eegzFDFwG6" target="_blank" rel="noopener noreferrer" class="bbq-photos-cta">View & Add Photos →</a>
+          <a href={EVENT.photosUrl} target="_blank" rel="noopener noreferrer" class="bbq-photos-cta">View & Add Photos →</a>
         </>
       ) : (
         <>
@@ -428,7 +428,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
             <div class="bbq-detail-val">The Magic Lab Production Staff</div>
           </div>
           <a href={`${base}rsvp`} class="bbq-rsvp">RSVP →</a>
-          <a href="https://docs.google.com/spreadsheets/d/18zLxT9jaC_YKmOs_uVOfjZiBkxApp-xc0FCXDg3vMcQ/edit?usp=sharing" class="bbq-food-link" target="_blank" rel="noopener noreferrer">Food Sign-Up Sheet →</a>
+          <a href={EVENT.foodSignupUrl} class="bbq-food-link" target="_blank" rel="noopener noreferrer">Food Sign-Up Sheet →</a>
         </>
       )}
     </div>
