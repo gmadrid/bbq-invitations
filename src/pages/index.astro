@@ -8,7 +8,11 @@ const sorted = published.sort((a, b) => a.data.date.valueOf() - b.data.date.valu
 const latest = sorted.length > 0 ? sorted[sorted.length - 1] : null;
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
-<Base title="BBQ Invitations">
+<Base
+  title="BBQ Invitations"
+  ogImage={latest?.data.thumbnail}
+  ogDescription="The same invitation to the same backyard BBQ — written in every style imaginable."
+>
   <style>
     /* ── Hero ── */
     .hero {
