@@ -320,27 +320,38 @@ import Base from '../layouts/Base.astro';
         <a href="https://docs.google.com/spreadsheets/d/18zLxT9jaC_YKmOs_uVOfjZiBkxApp-xc0FCXDg3vMcQ/edit?usp=sharing" class="rsvp-thanks-food-link" target="_blank" rel="noopener noreferrer">Food Sign-Up →</a>
       </div>
     </div>
+
+    <div class="rsvp-thanks" id="rsvp-regrets">
+      <h2 class="rsvp-thanks-title">We'll Miss You.</h2>
+      <p class="rsvp-thanks-body">
+        Thanks for letting us know. See you next season.
+      </p>
+    </div>
   </div>
 
   <script>
     const form = document.getElementById('rsvp-form');
     const thanks = document.getElementById('rsvp-thanks');
+    const regrets = document.getElementById('rsvp-regrets');
     const error = document.getElementById('rsvp-error');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       error.style.display = 'none';
 
+      const data = new FormData(form);
+      const attending = data.get('attending') === 'yes';
+
       try {
         const res = await fetch('https://formspree.io/f/mqegryze', {
           method: 'POST',
-          body: new FormData(form),
+          body: data,
           headers: { 'Accept': 'application/json' },
         });
 
         if (res.ok) {
           form.style.display = 'none';
-          thanks.classList.add('visible');
+          (attending ? thanks : regrets).classList.add('visible');
         } else {
           error.style.display = 'block';
         }
