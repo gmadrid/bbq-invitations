@@ -1,4 +1,7 @@
 import { getCollection } from 'astro:content';
+import { getETDayCutoff } from './date';
+
+export { getETDayCutoff } from './date';
 
 export async function getPublishedInvitations() {
   const invitations = await getCollection('invitations');
@@ -6,7 +9,7 @@ export async function getPublishedInvitations() {
 
   if (isDev) return invitations;
 
-  const todayET = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York' });
-  const endOfToday = new Date(todayET + ' 23:59:59');
-  return invitations.filter(inv => inv.data.date <= endOfToday);
+  // Invitation dates are midnight UTC, so < next-ET-day-midnight catches today's invitation.
+  const cutoff = getETDayCutoff();
+  return invitations.filter(inv => inv.data.date < cutoff);
 }
