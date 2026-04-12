@@ -1,12 +1,17 @@
 ---
-title: "Queen of Fairies"
-style: "Queen of Fairies"
+title: "Queene of Fairyes"
+style: "Queene of Fairyes"
 date: 2026-05-01
 type: text
-fonts: ["Lora:ital,wght@0,400;1,400"]
+fonts: ["Cormorant Garamond:ital,wght@0,400;1,400"]
 accentColor: "#2a1a4a"
 teaser: "We do not often speak to mortals directly."
+thumbnail: "/thumbnails/23-fairies.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Cormorant Garamond', Georgia, serif; }
+</style>
 
 *spoken in a voice like wind through silver bells, or the sound a dewdrop makes when it falls into still water, which is no sound at all and yet somehow everything*
 
@@ -34,11 +39,11 @@ We watched and we were —
 
 — pleased.
 
-And now they gather. On the seventeenth day of the month the mortals call May, which we call by an older name that would take too long to explain and would give you a headache besides, at the first hour past midday, at the dwelling place on Scituate Street — number seventy, in the mortal territory of Arlington — in the garden behind the house.
+And now they gather. On the seventeenth day of the month the mortals call May, which we call by an older name that would take too long to explain and would give you a headache besides, at the first hour past midday, at the dwellinge place on Scituate Street — number seventy, in the mortal territory of Arlington — in the garden behind the house.
 
 The rear garden.
 
-*[the fairy queen smiles here, and something in the garden moves that wasn't moving before]*
+*[the fairy queene smiles here, and something in the garden moves that wasn't moving before]*
 
 We know that garden. We have always known that garden. There is something in the soil there, something in the way the light falls in the late afternoon of May, something that was there long before the house was built and will be there long after, something that makes it exactly the right place to mark the end of a season of making.
 
@@ -72,9 +77,9 @@ We were impressed. We are not often impressed.
 
 Come then.
 
-Come to the garden at the hour of one on the seventeenth of May and step through the side gate and let the season be finished and let the next season not yet begin and stand for one afternoon in the particular light of that particular garden while Jeannine tends the fire and Felice holds everything together and the Founders do what Founders do.
+Come to the garden at the hour of one on the seventeenth of May and step through the side gate and let the season be finished and let the next season not yet begin and stand for one afternoon in the particular light of that particular garden while Jeannine tends the fire and Felice holds everything together and the Court does what Courts do.
 
-Be mortal in that garden. Be briefly, beautifully, completely mortal.
+Be mortal in that garden. Be briefly, completely mortal. Beautiful in your decay.
 
 We will be watching.
 
@@ -84,7 +89,7 @@ But this time, we promise, only with affection.
 
 *[something moves through the flowers]*
 
-*[something laughs, very quietly, like the sound a dewdrop makes]*
+*[something laughs, very quietly, like the sound a dewdrop makes. terrifying]*
 
 *[it is gone]*
 
@@ -92,4 +97,4 @@ But this time, we promise, only with affection.
 
 *70 Scituate Street, Arlington. The rear garden. May 17th. One o'clock. Bring something. Come.*
 
-*— By gracious leave of Her Majesty Titania, Queen of the Fairies, Sovereign of the Moonlit Places, She Who Was Old When the World Was Young, and Felice.*
+*— By gracious leave of Her Majesty Titania, Queene of the Fairyes, Soveraigne of the Moonlit Places, She Who Was Old When the World Was Young, and Felice.*
