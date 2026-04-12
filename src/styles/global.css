@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.22em] uppercase text-accent mb-3 block;
+  }
+}
