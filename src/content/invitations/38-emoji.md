@@ -6,6 +6,7 @@ type: text
 fonts: []
 accentColor: "#4a2a6a"
 teaser: "🎩🪄✨ 👩🔥👑 🏡🌿🔥 🗓️⏰📍"
+thumbnail: "/thumbnails/38-emoji.png"
 ---
 
 🎩🪄✨
