@@ -40,27 +40,23 @@ const googleFontsUrl = fonts.length > 0
       --brand:        #7c3aed;
     }
 
-    /* Base typography */
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
     /* Scroll state — JS toggles .scrolled, Tailwind can't express this */
     .site-header { transition: background 0.2s, border-color 0.2s; }
     .site-header.scrolled { background: #0a0a0add; border-color: #0a0a0a; }
     .site-header.scrolled .site-logo { color: #ffffff; }
     .site-header.scrolled .site-nav a { color: #999; }
     .site-header.scrolled .site-nav a:hover { color: var(--accent); }
-    .site-header.scrolled .nav-cta { background: var(--brand); color: #ccc !important; }
+    .site-header.scrolled .nav-cta { background: var(--brand); color: #ccc; }
   </style>
 </head>
 <body class="bg-white text-ink font-body leading-[1.7] min-h-screen">
   <header class="site-header flex items-center justify-between px-8 h-14 border-b-site border-border sticky top-0 bg-white z-[100]">
-    <a href={base} class="site-logo font-display text-[22px] tracking-[0.08em] !text-ink no-underline hover:no-underline">BBQ<span class="text-accent">.</span>INVITATIONS</a>
+    <a href={base} class="site-logo font-display text-[22px] tracking-[0.08em] text-ink no-underline hover:no-underline">BBQ<span class="text-accent">.</span>INVITATIONS</a>
     <nav class="site-nav flex items-center gap-8 font-mono text-xs tracking-[0.12em] uppercase" aria-label="Site navigation">
-      <a href={`${base}#styles`} class="!text-[#777] no-underline hover:!text-accent hover:no-underline">All Invitations</a>
-      {!photosPublished && <a href={EVENT.foodSignupUrl} target="_blank" rel="noopener noreferrer" class="!text-[#777] no-underline hover:!text-accent hover:no-underline">Food Sign-Up</a>}
-      {showPhotos && <a href={EVENT.photosUrl} target="_blank" rel="noopener noreferrer" class="!text-[#777] no-underline hover:!text-accent hover:no-underline">Photos</a>}
-      <a href={`${base}rsvp`} class="nav-cta bg-brand !text-white py-1 px-3 tracking-[0.14em] hover:opacity-[0.88] hover:!text-white hover:no-underline">RSVP</a>
+      <a href={`${base}#styles`} class="text-[#777] no-underline hover:text-accent hover:no-underline">All Invitations</a>
+      {!photosPublished && <a href={EVENT.foodSignupUrl} target="_blank" rel="noopener noreferrer" class="text-[#777] no-underline hover:text-accent hover:no-underline">Food Sign-Up</a>}
+      {showPhotos && <a href={EVENT.photosUrl} target="_blank" rel="noopener noreferrer" class="text-[#777] no-underline hover:text-accent hover:no-underline">Photos</a>}
+      <a href={`${base}rsvp`} class="nav-cta bg-brand text-white py-1 px-3 tracking-[0.14em] hover:opacity-[0.88] hover:text-white hover:no-underline">RSVP</a>
     </nav>
   </header>
 

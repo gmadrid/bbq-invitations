@@ -62,7 +62,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
         </p>
       </div>
       {latest?.data.thumbnail && (
-        <a href={`${base}invitation/${latest.slug}`} class="hero-latest shrink-0 no-underline flex flex-col items-center gap-2 cursor-pointer max-sm:flex-row max-sm:w-full max-sm:gap-4">
+        <a href={`${base}invitation/${latest.slug}`} class="hero-latest shrink-0 text-ink no-underline flex flex-col items-center gap-2 cursor-pointer max-sm:flex-row max-sm:w-full max-sm:gap-4">
           <span class="hero-latest-label font-mono text-[10px] tracking-[0.2em] uppercase text-accent">The Latest</span>
           <img src={`${base}${latest.data.thumbnail.replace(/^\//, '')}`} alt={latest.data.style} class="hero-latest-img w-[200px] aspect-[4/3] object-cover border-site border-border transition-[transform,border-color] duration-150 max-sm:w-[120px]" />
           <span class="hero-latest-title font-body italic text-[0.9rem] text-ink-soft">
