@@ -14,15 +14,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
   ogDescription="The same invitation to the same backyard BBQ — written in every style imaginable."
 >
   <style>
-    /* ── Hero ── */
-    .hero {
-      padding: 5rem 0 4rem;
-      border-bottom: var(--border-width) solid var(--border);
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 0;
-    }
-
+    /* Hero background text — pure decorative, no Tailwind equivalent */
     .hero-bg {
       position: absolute;
       top: -30px;
@@ -37,431 +29,131 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       z-index: 0;
     }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .hero-text { flex: 1; }
-
-    .hero-latest {
-      flex-shrink: 0;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .hero-latest-label {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .hero-latest-img {
-      width: 200px;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      border: var(--border-width) solid var(--border);
-    }
-
-    .hero-latest-title {
-      font-family: var(--font-body);
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--ink-soft);
-    }
-
-    .hero-latest:hover .hero-latest-img {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 2px var(--accent);
-    }
-
-    .hero-latest-img {
-      transition: transform 0.15s, border-color 0.15s;
-    }
-
-    .hero-latest:hover .hero-latest-label {
-      color: var(--ink);
-    }
-
-    .hero-latest:hover .hero-latest-title {
-      color: var(--accent);
-    }
-
-    .hero-latest { cursor: pointer; }
-
-    @media (max-width: 600px) {
-      .hero-content { flex-direction: column; align-items: flex-start; }
-      .hero-latest { flex-direction: row; width: 100%; gap: 1rem; }
-      .hero-latest-img { width: 120px; }
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(56px, 10vw, 96px);
-      line-height: 0.92;
-      letter-spacing: 0.01em;
-      color: var(--ink);
-      margin-bottom: 1.5rem;
-    }
-
-    .hero-title-accent {
-      color: var(--accent);
-      display: block;
-    }
-
-    .hero-sub {
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--ink-soft);
-      max-width: 440px;
-      line-height: 1.75;
-    }
-
-    /* ── BBQ Info ── */
-    .bbq-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-bottom: var(--border-width) solid var(--border);
-    }
-
-    @media (max-width: 600px) {
-      .bbq-section { grid-template-columns: 1fr; }
-      .bbq-right { border-left: none; border-top: var(--border-width) solid var(--border); }
-    }
-
-    .bbq-left {
-      padding: 2.5rem 0 2.5rem;
-      border-right: var(--border-width) solid var(--border);
-      padding-right: 2rem;
-    }
-
-    .bbq-heading {
-      font-family: var(--font-display);
-      font-size: 42px;
-      letter-spacing: 0.04em;
-      line-height: 1;
-      margin-bottom: 1.75rem;
-    }
-
-    .bbq-detail { margin-bottom: 1.1rem; }
-
-    .bbq-detail-label {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      margin-bottom: 3px;
-    }
-
-    .bbq-detail-val {
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--ink);
-      line-height: 1.4;
-    }
-
-    .bbq-right {
-      padding: 2.5rem 0 2.5rem;
-      padding-left: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-
-    .bbq-jeannine {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: var(--ink-soft);
-      line-height: 1.7;
-      border-left: 3px solid var(--accent);
-      padding-left: 1rem;
-    }
-
-    .bbq-rsvp {
-      display: inline-block;
-      background: var(--accent);
-      color: #ffffff;
-      font-family: var(--font-display);
-      font-size: 24px;
-      letter-spacing: 0.1em;
-      padding: 12px 28px;
-      text-decoration: none;
-      align-self: flex-start;
-      margin-top: auto;
-      transition: opacity 0.1s;
-    }
-
-    .bbq-rsvp:hover { opacity: 0.88; text-decoration: none; }
-
-    .bbq-food-link {
-      display: inline-block;
-      align-self: flex-start;
-      font-family: var(--font-display);
-      font-size: 24px;
-      letter-spacing: 0.1em;
-      padding: 12px 28px;
-      border: var(--border-width) solid var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-      margin-top: 0.75rem;
-      transition: opacity 0.1s;
-    }
-    .bbq-food-link:hover { background: rgba(124, 58, 237, 0.12); text-decoration: none; }
-
-    .bbq-photos-heading {
-      font-family: var(--font-display);
-      font-size: 32px;
-      letter-spacing: 0.04em;
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-
-    .bbq-photos-body {
-      font-size: 0.95rem;
-      font-style: italic;
-      color: var(--ink-soft);
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .bbq-photos-cta {
-      display: inline-block;
-      background: var(--accent);
-      color: #ffffff;
-      font-family: var(--font-display);
-      font-size: 24px;
-      letter-spacing: 0.1em;
-      padding: 12px 28px;
-      text-decoration: none;
-      align-self: flex-start;
-      transition: opacity 0.1s;
-    }
-
-    .bbq-photos-cta:hover { opacity: 0.88; text-decoration: none; }
-
-    /* ── Grid ── */
-    .grid-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      padding: 1.25rem 0 1rem;
-      border-bottom: 1px solid var(--border-light);
-      margin-bottom: 0;
-    }
-
-    .grid-heading {
-      font-family: var(--font-display);
-      font-size: 32px;
-      letter-spacing: 0.06em;
-    }
-
-    .grid-count {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.1em;
-      color: var(--ink-muted);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      border-left: var(--border-width) solid var(--border);
-      margin-top: 0;
-    }
-
-    .grid-card {
-      display: block;
-      border-right: var(--border-width) solid var(--border);
-      border-bottom: var(--border-width) solid var(--border);
-      color: var(--ink);
-      text-decoration: none;
-      transition: background 0.12s;
-    }
-
-    .grid-card:hover {
-      background: #f0eaff;
-      text-decoration: none;
-    }
-
+    /* Grid card hover effects — parent:hover affecting children */
+    .grid-card:hover { background: #f0eaff; text-decoration: none; }
     .grid-card:hover .grid-thumb { background: var(--accent) !important; }
     .grid-card:hover .grid-thumb-label { color: #ffffff !important; }
     .grid-card:hover .grid-thumb img { transform: scale(1.05); }
     .grid-card:hover .grid-card-title { color: var(--accent); }
-    .grid-card:hover .grid-card-date { color: var(--ink); }
+    .grid-card:hover .grid-card-date { color: #0a0a0a; }
 
-    .grid-thumb {
-      aspect-ratio: 4/3;
-      display: flex;
-      align-items: flex-end;
-      padding: 0.75rem;
-      transition: background 0.12s;
-      position: relative;
-      overflow: hidden;
+    /* Hero latest hover effects */
+    .hero-latest:hover .hero-latest-img {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent);
     }
-
-    .grid-thumb img {
-      transition: transform 0.15s;
-    }
-
-    .grid-thumb-label {
-      font-family: var(--font-display);
-      font-size: 13px;
-      letter-spacing: 0.05em;
-      line-height: 1.2;
-      transition: color 0.12s;
-    }
-
-    .grid-info {
-      padding: 0.75rem 0.9rem 1rem;
-      border-top: 1px solid var(--border-light);
-    }
-
-    .grid-card-title {
-      font-family: var(--font-body);
-      font-style: italic;
-      font-size: 0.95rem;
-      color: var(--ink);
-      margin-bottom: 0.25rem;
-      line-height: 1.3;
-      transition: color 0.12s;
-    }
-
-    .grid-card-teaser {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      letter-spacing: 0.05em;
-      color: var(--ink-muted);
-      line-height: 1.5;
-    }
-
-    .grid-card-date {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      color: var(--accent);
-      margin-top: 0.5rem;
-      letter-spacing: 0.08em;
-    }
+    .hero-latest:hover .hero-latest-label { color: #0a0a0a; }
+    .hero-latest:hover .hero-latest-title { color: var(--accent); }
   </style>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="relative overflow-hidden py-20 pb-16 border-b-site border-border mb-0">
     <div class="hero-bg">BBQ</div>
-    <div class="hero-content">
-      <div class="hero-text">
+    <div class="relative z-[1] flex justify-between items-center gap-8 max-sm:flex-col max-sm:items-start">
+      <div class="flex-1">
         <span class="eyebrow">Boston Magic Lab · End of Season · 2026</span>
-        <h1 class="hero-title">
+        <h1 class="font-display text-[clamp(56px,10vw,96px)] leading-[0.92] tracking-[0.01em] text-ink mb-6">
           One Barbecue.<br>
-          <span class="hero-title-accent">Many Voices.</span>
+          <span class="text-accent block">Many Voices.</span>
         </h1>
-        <p class="hero-sub">
+        <p class="text-[1.05rem] italic text-ink-soft max-w-[440px] leading-[1.75]">
           The same invitation to the same backyard BBQ —
           written in every style I can manage.
         </p>
       </div>
       {latest?.data.thumbnail && (
-        <a href={`${base}invitation/${latest.slug}`} class="hero-latest">
-          <span class="hero-latest-label">The Latest</span>
-          <img src={`${base}${latest.data.thumbnail.replace(/^\//, '')}`} alt={latest.data.style} class="hero-latest-img" />
-          <span class="hero-latest-title">{latest.data.style}</span>
+        <a href={`${base}invitation/${latest.slug}`} class="hero-latest shrink-0 text-ink no-underline flex flex-col items-center gap-2 cursor-pointer max-sm:flex-row max-sm:w-full max-sm:gap-4">
+          <span class="hero-latest-label font-mono text-[10px] tracking-[0.2em] uppercase text-accent">The Latest</span>
+          <img src={`${base}${latest.data.thumbnail.replace(/^\//, '')}`} alt={latest.data.style} class="hero-latest-img w-[200px] aspect-[4/3] object-cover border-site border-border transition-[transform,border-color] duration-150 max-sm:w-[120px]" />
+          <span class="hero-latest-title font-body italic text-[0.9rem] text-ink-soft">
+            {latest.data.style}
+          </span>
         </a>
       )}
     </div>
   </section>
 
   <!-- BBQ Info -->
-  <section class="bbq-section">
-    <div class="bbq-left">
+  <section class="grid grid-cols-2 border-b-site border-border max-sm:grid-cols-1">
+    <div class="py-10 pr-8 border-r-site border-border max-sm:border-r-0">
       <span class="eyebrow">The Actual Barbecue</span>
-      <div class="bbq-heading">The Details</div>
+      <div class="font-display text-[42px] tracking-[0.04em] leading-none mb-7">The Details</div>
 
-      <div class="bbq-detail">
-        <div class="bbq-detail-label">When</div>
-        <div class="bbq-detail-val">{EVENT.date}</div>
+      <div class="mb-[1.1rem]">
+        <div class="font-mono text-[9px] tracking-[0.22em] uppercase text-ink-muted mb-[3px]">When</div>
+        <div class="text-base italic text-ink leading-[1.4]">{EVENT.date}</div>
       </div>
-      <div class="bbq-detail">
-        <div class="bbq-detail-label">Where</div>
-        <div class="bbq-detail-val">{EVENT.address}<br>{EVENT.addressLine2}</div>
+      <div class="mb-[1.1rem]">
+        <div class="font-mono text-[9px] tracking-[0.22em] uppercase text-ink-muted mb-[3px]">Where</div>
+        <div class="text-base italic text-ink leading-[1.4]">{EVENT.address}<br>{EVENT.addressLine2}</div>
       </div>
-      <div class="bbq-detail">
-        <div class="bbq-detail-label">Who</div>
-        <div class="bbq-detail-val">The Magic Lab & Friends</div>
+      <div class="mb-[1.1rem]">
+        <div class="font-mono text-[9px] tracking-[0.22em] uppercase text-ink-muted mb-[3px]">Who</div>
+        <div class="text-base italic text-ink leading-[1.4]">The Magic Lab & Friends</div>
       </div>
-      <div class="bbq-detail">
-        <div class="bbq-detail-label">Bring</div>
-        <div class="bbq-detail-val">Food or drink to share<br>
-          <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--ink-muted);font-style:normal;">
+      <div class="mb-[1.1rem]">
+        <div class="font-mono text-[9px] tracking-[0.22em] uppercase text-ink-muted mb-[3px]">Bring</div>
+        <div class="text-base italic text-ink leading-[1.4]">Food or drink to share<br>
+          <span class="font-mono text-[0.75rem] text-ink-muted not-italic">
             Coordination forthcoming
           </span>
         </div>
       </div>
     </div>
 
-    <div class="bbq-right">
+    <div class="py-10 pl-8 flex flex-col gap-6 max-sm:border-t-site max-sm:border-border max-sm:pl-0">
       {photosPublished ? (
         <>
           <span class="eyebrow">The BBQ Happened</span>
-          <div class="bbq-photos-heading">See the Photos</div>
-          <p class="bbq-photos-body">
+          <div class="font-display text-[32px] tracking-[0.04em] leading-none mb-4">See the Photos</div>
+          <p class="text-[0.95rem] italic text-ink-soft leading-[1.7] mb-6">
             The smoke has cleared, the coals are cold,
             and the pictures are in.
           </p>
-          <a href={EVENT.photosUrl} target="_blank" rel="noopener noreferrer" class="bbq-photos-cta">View & Add Photos →</a>
+          <a href={EVENT.photosUrl} target="_blank" rel="noopener noreferrer" class="self-start inline-block bg-accent text-white font-display text-2xl tracking-[0.1em] py-3 px-7 no-underline transition-opacity duration-100 hover:opacity-[0.88] hover:no-underline">View & Add Photos →</a>
         </>
       ) : (
         <>
-          <p class="bbq-jeannine">
+          <p class="text-[0.9rem] italic text-ink-soft leading-[1.7] border-l-[3px] border-accent pl-4">
             Jeannine will be presiding at the grill,
             as is her singular and irreplaceable custom.
           </p>
-          <div class="bbq-detail">
-            <div class="bbq-detail-label">Produced by</div>
-            <div class="bbq-detail-val">The Magic Lab Production Staff</div>
+          <div class="mb-[1.1rem]">
+            <div class="font-mono text-[9px] tracking-[0.22em] uppercase text-ink-muted mb-[3px]">Produced by</div>
+            <div class="text-base italic text-ink leading-[1.4]">The Magic Lab Production Staff</div>
           </div>
-          <a href={`${base}rsvp`} class="bbq-rsvp">RSVP →</a>
-          <a href={EVENT.foodSignupUrl} class="bbq-food-link" target="_blank" rel="noopener noreferrer">Food Sign-Up Sheet →</a>
+          <a href={`${base}rsvp`} class="self-start mt-auto inline-block bg-accent text-white font-display text-2xl tracking-[0.1em] py-3 px-7 no-underline transition-opacity duration-100 hover:opacity-[0.88] hover:no-underline">RSVP →</a>
+          <a href={EVENT.foodSignupUrl} class="self-start inline-block font-display text-2xl tracking-[0.1em] py-3 px-7 border-site border-accent text-accent no-underline mt-3 transition-opacity duration-100 hover:bg-[rgba(124,58,237,0.12)] hover:no-underline" target="_blank" rel="noopener noreferrer">Food Sign-Up Sheet →</a>
         </>
       )}
     </div>
   </section>
 
   <!-- Invitation Grid -->
-  <div class="grid-header" id="styles">
-    <div class="grid-heading">All Invitations</div>
-    <div class="grid-count">{sorted.length} invitations · 1 per day</div>
+  <div class="flex items-baseline justify-between py-5 pb-4 border-b border-border-light mb-0" id="styles">
+    <div class="font-display text-[32px] tracking-[0.06em]">All Invitations</div>
+    <div class="font-mono text-[10px] tracking-[0.1em] text-ink-muted">{sorted.length} invitations · 1 per day</div>
   </div>
 
-  <div class="grid">
+  <div class="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] border-l-site border-border mt-0">
     {sorted.map(inv => (
-      <a href={`${base}invitation/${inv.slug}`} class="grid-card">
+      <a href={`${base}invitation/${inv.slug}`} class="grid-card block border-r-site border-r-border border-b-site border-b-border text-ink no-underline transition-colors duration-[120ms]">
         <div
-          class="grid-thumb"
+          class="grid-thumb aspect-[4/3] flex items-end p-3 transition-colors duration-[120ms] relative overflow-hidden"
           style={`background: ${inv.data.accentColor ?? '#1a1a1a'};`}
         >
           {inv.data.thumbnail
             ? <img src={`${base}${inv.data.thumbnail.replace(/^\//, '')}`} alt={inv.data.style} loading="lazy"
-                style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;" />
-            : <span
-                class="grid-thumb-label"
-                style="color: #ffffff;"
-              >
+                class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-150" />
+            : <span class="grid-thumb-label font-display text-[13px] tracking-[0.05em] leading-[1.2] transition-colors duration-[120ms] text-white">
                 {inv.data.style}
               </span>
           }
         </div>
-        <div class="grid-info">
-          <div class="grid-card-title">{inv.data.style}</div>
-          <div class="grid-card-teaser">{inv.data.teaser}</div>
-          <div class="grid-card-date">
+        <div class="py-3 px-[0.9rem] pb-4 border-t border-border-light">
+          <div class="grid-card-title font-body italic text-[0.95rem] text-ink mb-1 leading-[1.3] transition-colors duration-[120ms]">{inv.data.style}</div>
+          <div class="font-mono text-[9px] tracking-[0.05em] text-ink-muted leading-[1.5]">{inv.data.teaser}</div>
+          <div class="grid-card-date font-mono text-[9px] text-accent mt-2 tracking-[0.08em]">
             {inv.data.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' })}
           </div>
         </div>
