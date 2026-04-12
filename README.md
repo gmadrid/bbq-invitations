@@ -4,195 +4,167 @@ One barbecue. Many voices. One new invitation style per day.
 
 A site for the Boston Magic Lab's 2026 end-of-season BBQ — featuring the same invitation written in every style imaginable, from Ernest Hemingway to a kindergarten teacher to the cereal box ingredient list.
 
+**Live site:** [bml-2026.party](https://bml-2026.party)
+
 ## Quick Start
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 Open `http://localhost:4321`.
 
-## Deploy to GitHub Pages
+## Scripts
 
-1. Create a new GitHub repo
-2. Push this code to the `main` branch
-3. Go to **Settings → Pages → Source** and set it to **GitHub Actions**
-4. Update `astro.config.mjs`:
-   ```js
-   site: 'https://yourusername.github.io',
-   base: '/your-repo-name',   // omit if using a custom domain
-   ```
-5. Push — the Actions workflow deploys automatically on every push to `main`
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start dev server (shows all invitations regardless of date) |
+| `pnpm build` | Production build (date-gated) |
+| `pnpm preview` | Preview production build locally |
+| `pnpm test` | Run tests (vitest) |
 
-### Custom Domain
+## How It Works
 
-1. Buy a domain (Cloudflare Registrar is ~$10/year and has no markup)
-2. Add a `CNAME` file to `public/` containing just your domain:
-   ```
-   bbqinvitations.com
-   ```
-3. In your DNS, add a CNAME record pointing to `yourusername.github.io`
-4. In GitHub: **Settings → Pages → Custom domain**, enter your domain
-5. Remove the `base` field from `astro.config.mjs`, keep `site`
+Invitations are Astro content collection entries — one Markdown file per invitation. Each has a `date` field. The site rebuilds daily at 9am UTC via GitHub Actions cron. At build time, only invitations with dates up to "today" in Eastern Time are included. In dev mode, all invitations are visible.
 
 ## Adding a New Invitation
 
-Create a new file in `src/content/invitations/`. Name it with a number prefix so they sort correctly:
+Create a file in `src/content/invitations/` with a number prefix:
 
 ```
-src/content/invitations/07-shakespeare.md
+src/content/invitations/20-nine-year-old.md
 ```
 
-### Frontmatter fields
+### Frontmatter
 
 ```yaml
 ---
-title: "Shakespeare"               # page <title>
-style: "William Shakespeare"       # display name on cards and headers
-date: 2026-05-07                   # controls sort order and display date
-type: text                         # "text" for markdown, "html" for raw HTML
-fonts: ["IM Fell English:ital@0;1"] # Google Font names (optional)
-accentColor: "#5c3a00"             # hex color for grid card + accent
-teaser: "A sonnet. Obviously."     # one-liner shown on the grid card
-thumbnail: "/thumbnails/07.jpg"    # optional image for grid card
+title: "Kindergarten Teacher"
+style: "Kindergarten Teacher"
+date: 2026-04-26
+type: text
+fonts: ["Patrick Hand"]
+accentColor: "#e8175d"
+teaser: "Dear families! We are SO EXCITED to tell you about a VERY SPECIAL EVENT!"
+thumbnail: "/thumbnails/19-kindergarten.png"
 ---
 ```
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `title` | yes | Page `<title>` |
+| `style` | yes | Display name on cards and headers |
+| `date` | yes | Publication date (controls when it appears and sort order) |
+| `type` | yes | `text` (Markdown) or `html` (raw HTML) |
+| `fonts` | no | Google Font family names, loaded only on this page |
+| `accentColor` | no | Hex color for grid card background and page accent |
+| `teaser` | no | One-liner shown on the grid card |
+| `thumbnail` | no | Path to image in `public/thumbnails/` |
 
 ### Text invitations
 
-Just write Markdown below the frontmatter. Standard formatting works: `**bold**`, `*italic*`, `---` for rules, `##` for headings, `>` for blockquotes.
+Write Markdown below the frontmatter. To override fonts for the invitation body, add a `<style>` block targeting `.inv-text-body`.
 
 ### HTML invitations
 
-Set `type: html` and write raw HTML below the frontmatter. The HTML renders directly on the page — no iframe needed. Include a `<style>` block at the top for per-invitation styles. Keep class names specific to avoid collisions with site styles.
+Set `type: html` and write raw HTML below the frontmatter. Include a `<style>` block for per-invitation styles. **Important:** avoid blank lines between HTML tags — the Markdown parser will treat them as paragraphs.
 
-```html
----
-type: html
-fonts: ["Bebas Neue", "Barlow Condensed:wght@300;700"]
----
+### Fonts
 
-<style>
-  .my-inv-wrap { background: #000; color: #fff; }
-</style>
-
-<div class="my-inv-wrap">
-  ...
-</div>
-```
-
-### Thumbnail images
-
-Drop a JPG or PNG into `public/thumbnails/` and reference it in frontmatter:
+Per-invitation fonts load only on that page. Use Google Fonts family names as they appear in the URL:
 
 ```yaml
-thumbnail: "/thumbnails/07-shakespeare.jpg"
+fonts:
+  - "DM Serif Display"
+  - "Source Serif 4:ital,wght@0,400;0,700;1,400"
 ```
 
-Without a thumbnail, the grid card shows the style name as text on the accent color background. That works fine — add images whenever you want.
+Base fonts (loaded on every page): Anton, Libre Baskerville, Inconsolata, Space Mono, DM Mono. Don't re-request these in invitation `fonts` arrays.
 
-## RSVP Form
+### Thumbnails
 
-The RSVP form is powered by [Formspree](https://formspree.io). Submissions go to:
-
-- **View submissions:** https://formspree.io/forms/mqegryze/submissions
-- **Form endpoint:** `https://formspree.io/f/mqegryze`
-
-The form is built with the site's design system in `src/pages/rsvp.astro`.
+Drop a PNG/JPG into `public/thumbnails/` (resized to 560px wide). Without a thumbnail, the grid card shows the style name as text on the accent color background.
 
 ## Project Structure
 
 ```
 bbq-invitations/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml          # GitHub Pages auto-deploy
+├── .github/workflows/
+│   └── deploy.yml              # GitHub Pages deploy (push, daily cron, manual)
 ├── public/
-│   └── thumbnails/             # grid card images (optional)
+│   ├── CNAME                   # custom domain: bml-2026.party
+│   ├── robots.txt              # blocks all crawlers
+│   └── thumbnails/             # grid card images
 ├── src/
+│   ├── config.ts               # photosPublished flag, event details, URLs
+│   ├── date.ts                 # timezone-safe ET day cutoff (pure, testable)
+│   ├── utils.ts                # getPublishedInvitations() date filtering
+│   ├── utils.test.ts           # vitest tests for date logic
 │   ├── content/
-│   │   ├── config.ts           # content collection schema
-│   │   └── invitations/        # one .md file per invitation
-│   │       ├── 01-old-timey.md
-│   │       ├── 02-hemingway.md
-│   │       └── ...
+│   │   ├── config.ts           # Zod schema for invitation collection
+│   │   └── invitations/        # one .md per invitation
 │   ├── layouts/
-│   │   └── Base.astro          # site shell, font loading, nav
+│   │   └── Base.astro          # site shell, design system, nav, fonts
 │   └── pages/
-│       ├── index.astro         # main page with BBQ info + grid
-│       ├── rsvp.astro          # RSVP page
+│       ├── index.astro         # hero, BBQ info, invitation grid
+│       ├── rsvp.astro          # RSVP form (Formspree)
 │       └── invitation/
-│           └── [slug].astro    # dynamic invitation page
+│           └── [slug].astro    # individual invitation page
+├── unpublished/                # invitations awaiting dates
+├── wont-use/                   # retired invitations
+├── originals/                  # full-size source images
 ├── astro.config.mjs
 └── package.json
 ```
 
-## Fonts
+## Design System
 
-Per-invitation fonts load only on that invitation's page via the `fonts` frontmatter field. Use Google Fonts family names exactly as they appear in the URL:
+Black, white, and purple. No gradients, shadows, rounded corners, or cream backgrounds.
 
-```yaml
-fonts:
-  - "IM Fell English:ital@0;1"
-  - "UnifrakturMaguntia"
-  - "Cormorant Garamond:ital,wght@0,300;1,400"
-```
+| Token | Value |
+|-------|-------|
+| `--accent` | Per-page via `accentColor` prop (default `#7c3aed`) |
+| `--brand` | `#7c3aed` (fixed, used for nav CTA) |
+| `--font-display` | Anton |
+| `--font-body` | Libre Baskerville |
+| `--font-mono` | Inconsolata |
 
-The site uses Lora + Cormorant Garamond as its base fonts, loaded globally.
+## RSVP
 
-## Invitations in This Collection
+Powered by [Formspree](https://formspree.io). Submissions go to form `mqegryze`.
 
-| # | Style | Type |
-|---|-------|------|
-| 01 | Old-Timey Magic Poster | text |
-| 02 | Ernest Hemingway | text |
-| 03 | New York Times Front Page | text |
-| 04 | Fancy New York Ball | html |
-| 05 | Carl Sagan | text |
-| 06 | George Carlin | text |
-| 07 | William Shakespeare | text |
-| 08 | Old Testament | text |
-| 09 | Old Norse Viking | text |
-| 10 | Captain Kirk | text |
-| 11 | Circus Broadside | html |
-| 12 | Voguing Ball | html |
-| 13 | Elizabethan Court | html |
-| 14 | Postmodern Art Critic | text |
-| 15 | Steve Jobs Keynote | text |
-| 16 | People Magazine | text |
-| 17 | Kermit the Frog | text |
-| 18 | Fozzie Bear | text |
-| 19 | Nine-Year-Old | text |
-| 20 | Manager's Self-Review Response | text |
-| 21 | Employee Performance Review | text |
-| 22 | Overwrought Emcee | text |
-| 23 | Haiku | text |
-| 24 | Limerick | text |
-| 25 | Gettysburg Address | text |
-| 26 | South Park | text |
-| 27 | Sound and the Fury | text |
-| 28 | e.e. cummings | text |
-| 29 | Yearbook Signing | text |
-| 30 | Cookbook Recipe | text |
-| 31 | Kindergarten Teacher | text |
-| 32 | Robin Williams | text |
-| 33 | Donald Trump | text |
-| 34 | Joe Rogan | text |
-| 35 | NYT Eviction Notice | html |
-| 36 | Mexican/Cajun Menu | html |
-| 37 | Cereal Box | html |
-| 38 | Tarot Reading | text |
-| 39 | 1940s Newsreel | text |
-| 40 | Emoji Only | text |
-| 41 | ASCII Art | text |
-| 42 | Bad High School French | text |
-| 43 | Crosby & Hope | text |
-| 44 | Road to Morocco (Song) | text |
-| 45 | Queen of Fairies | text |
-| 46 | Fairy Queen (Short) | text |
-| 47 | Shakespeare Sonnet | text |
+- **Submissions:** https://formspree.io/forms/mqegryze/submissions
+
+## Post-BBQ
+
+After the event, flip `photosPublished` to `true` in `src/config.ts`. This replaces the RSVP/food-signup section on the main page with a photos CTA, hides the food sign-up nav link, and shows the photos nav link.
+
+## Published Invitations
+
+| # | Style | Type | Date |
+|---|-------|------|------|
+| 01 | Old-Timey Invitation | html | Apr 8 |
+| 02 | Fancy New York Ball | html | Apr 10 |
+| 03 | Elizabethan Court | html | Apr 11 |
+| 04 | New York Times Front Page | text | Apr 12 |
+| 05 | People Magazine | text | Apr 13 |
+| 06 | Cookbook Recipe | text | Apr 14 |
+| 07 | Cereal Box Ingredient List | html | Apr 15 |
+| 08 | Eviction Notice | html | Apr 16 |
+| 09 | Mexican/Cajun Restaurant Menu | html | Apr 17 |
+| 10 | Circus Broadside | html | Apr 18 |
+| 11 | Voguing Ball | html | Apr 19 |
+| 12 | Steve Jobs Keynote | text | Apr 20 |
+| 13 | Ernest Hemingway | text | Apr 21 |
+| 14 | Carl Sagan | text | Apr 22 |
+| 15 | George Carlin | text | Apr 23 |
+| 17 | Kermit the Frog | text | Apr 24 |
+| 18 | Fozzie Bear | text | Apr 25 |
+| 19 | Kindergarten Teacher | text | Apr 26 |
+
+*18 published, 20 in `unpublished/`, 6 in `wont-use/`.*
 
 ---
 
-*Boston Magic Lab · End of Season 2026 · Produced by Felice & the Founders*
+*Boston Magic Lab · End of Season 2026 · Produced by Felice & the Production Staff*
