@@ -1,13 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getCollection, getEntry } from 'astro:content';
+import { getPublishedInvitations } from '../../utils';
 
 export async function getStaticPaths() {
-  const invitations = await getCollection('invitations');
-  const isDev = import.meta.env.DEV;
-  const today = new Date();
-  today.setUTCHours(23, 59, 59, 999);
-  const published = isDev ? invitations : invitations.filter(inv => inv.data.date <= today);
+  const published = await getPublishedInvitations();
   return published.map(inv => ({
     params: { slug: inv.slug },
     props: { inv },
