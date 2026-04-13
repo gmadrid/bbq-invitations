@@ -1,12 +1,18 @@
 ---
-title: "Captain Kirk"
-style: "Captain Kirk"
+title: "Kirk"
+style: "Kirk"
 date: 2026-05-04
 type: text
-fonts: []
+fonts: ["Orbitron:wght@400;700"]
 accentColor: "#1a1a4a"
 teaser: "Don't tell me the odds."
+thumbnail: "/thumbnails/26-kirk.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Orbitron', 'Courier New', monospace; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Orbitron', 'Courier New', monospace; }
+</style>
 
 *Captain's Log. Stardate — irrelevant. It's May. It's Sunday. It's Arlington.*
 
@@ -24,7 +30,7 @@ Then we go.
 
 Bones, I know what you're going to say.
 
-BONES: Dammit Jim, I'm a doctor not a —
+&nbsp;&nbsp;&nbsp;&nbsp;**BONES:** Dammit Jim, I'm a doctor not a —
 
 I know what you are. You're a man who hasn't eaten since the Neutral Zone incident and there is a woman in Arlington, Massachusetts who is doing things with fire that Starfleet Academy never prepared us for and we are *going.*
 
@@ -32,11 +38,11 @@ I know what you are. You're a man who hasn't eaten since the Neutral Zone incide
 
 Spock, what are the odds that this barbecue — this gathering of the Magic Lab and their friends at seventy Scituate Street — what are the odds that it is as good as last year?
 
-SPOCK: Captain, given Jeannine's historical performance metrics, the probability of excellence exceeds —
+&nbsp;&nbsp;&nbsp;&nbsp;**SPOCK:** Captain, given Jeannine's historical performance metrics, the probability of excellence exceeds —
 
 Spock.
 
-SPOCK: Yes, Captain.
+&nbsp;&nbsp;&nbsp;&nbsp;**SPOCK:** Yes, Captain.
 
 Don't tell me the odds.
 
@@ -44,7 +50,7 @@ Don't tell me the odds.
 
 ---
 
-You know what I've learned out here? In all these years? Sailing between the stars, making first contact, staring into the face of things that wanted to unmake us?
+You know what I've learned out here? In all these years? Sailing between the stars, making first contact, staring into the face of things that stared back?
 
 A season — a *good* season — deserves to be marked. Not with paperwork. Not with a commendation from Starfleet Command. Not with a — a *ceremony.*
 
@@ -52,7 +58,7 @@ With fire. And food. And the people you went through it with.
 
 That's all. That's the whole thing.
 
-Felice knows this. The Founders know this. And Jeannine —
+Felice knows this. The Federation knows this. And Jeannine —
 
 *[he pauses. Something moves across his face.]*
 
@@ -68,11 +74,11 @@ The coordination of provisions is forthcoming. Starfleet is handling it. Or Feli
 
 ---
 
-SPOCK: Captain, I fail to understand why you are emotionally affected by a — a *barbecue.*
+&nbsp;&nbsp;&nbsp;&nbsp;**SPOCK:** Captain, I fail to understand why you are emotionally affected by a — a *barbecue.*
 
 Spock.
 
-SPOCK: Captain.
+&nbsp;&nbsp;&nbsp;&nbsp;**SPOCK:** Captain.
 
 Have you ever — in all your years — in all the cold logic of your existence — have you ever stood in a garden. In May. When the light is doing what May light does. And smelled something coming off a grill that made you feel like — like whatever you went through to get there — was *worth it?*
 
@@ -82,7 +88,9 @@ That's what I thought.
 
 ---
 
-*This is Captain James T. Kirk. On behalf of the Magic Lab, Felice, the Founders, and Jeannine — who needs no further introduction in this or any other quadrant —*
+*[He flicks open the communicator.]*
+
+*This is Captain James T. Kirk. On behalf of the Magic Lab, Felice, the Federation, and Jeannine — who needs no further introduction in this or any other quadrant —*
 
 *You are ordered. To attend.*
 
@@ -94,6 +102,6 @@ That's what I thought.
 
 ---
 
-*[He closes the communicator. Looks out at the stars. Looks back down at Arlington. Straightens his tunic.]*
+*[He closes the communicator. Looks out at the stars. Looks back down at Arlington. Straightens his green wrap-around tunic.]*
 
 *[He smiles.]*

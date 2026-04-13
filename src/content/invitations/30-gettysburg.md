@@ -1,6 +1,6 @@
 ---
-title: "Gettysburg Address"
-style: "Gettysburg Address"
+title: "Gettysburg"
+style: "Gettysburg"
 date: 2026-05-08
 type: text
 fonts: ["Libre+Baskerville:ital@0;1"]

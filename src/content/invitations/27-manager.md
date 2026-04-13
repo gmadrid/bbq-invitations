@@ -1,12 +1,18 @@
 ---
-title: "Manager's Performance Review Response"
-style: "Manager's Performance Review Response"
+title: "Performance Review Response"
+style: "Performance Review Response"
 date: 2026-05-05
 type: text
-fonts: []
+fonts: ["Inter:wght@400;700"]
 accentColor: "#2a5a8a"
 teaser: "Really strong stuff here. A few thoughts while they're fresh!"
+thumbnail: "/thumbnails/27-manager.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Inter', Arial, sans-serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Inter', Arial, sans-serif; }
+</style>
 
 **Re: Self-Evaluation Form — Annual Performance Review**
 *From: [Manager]*

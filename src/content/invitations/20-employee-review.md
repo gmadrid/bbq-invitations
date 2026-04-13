@@ -1,12 +1,18 @@
 ---
-title: "Employee Performance Review"
-style: "Employee Performance Review"
+title: "Performance Review"
+style: "Performance Review"
 date: 2026-04-28
 type: text
-fonts: []
+fonts: ["Inter:wght@400;700"]
 accentColor: "#3a5a7a"
 teaser: "I would actually push back on this section as a concept."
+thumbnail: "/thumbnails/20-employee-review.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Inter', Arial, sans-serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Inter', Arial, sans-serif; }
+</style>
 
 **Self-Evaluation Form — Annual Performance Review**
 *Employee: The Boston Magic Lab*
@@ -18,7 +24,7 @@ teaser: "I would actually push back on this section as a concept."
 
 This season I feel like I really grew a lot as an organization and delivered some really strong results in terms of magic and also just like general vibe. The shows were good. I think most people would agree they were good if they had actually come to them, which, noted.
 
-I collaborated effectively with my team including Felice who is honestly doing the most and the Founders who are also great and very easy to work with, which is something I value in a working environment, just putting that out there.
+I collaborated effectively with my team including Felice who is honestly doing the most and the Managers who are also great and very easy to work with, which is something I value in a working environment, just putting that out there.
 
 I also maintained a really positive relationship with our audience base and external stakeholders (friends) throughout the entire season with zero formal complaints which I think speaks for itself.
 

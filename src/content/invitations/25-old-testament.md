@@ -3,17 +3,23 @@ title: "Old Testament"
 style: "Old Testament"
 date: 2026-05-03
 type: text
-fonts: ["Libre+Baskerville:ital@0;1"]
+fonts: ["IM Fell English:ital@0;1"]
 accentColor: "#3a1e00"
 teaser: "And it came to pass, in the seventeen day of the fifth month..."
+thumbnail: "/thumbnails/25-old-testament.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'IM Fell English', Georgia, serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'IM Fell English', Georgia, serif; }
+</style>
 
 **The Book of the Magic Lab**
 *Chapter the First: The Calling of the Feast*
 
 ---
 
-And it came to pass, in the seventeen day of the fifth month, that the elders of the Magic Lab — even Felice and the Founders — lifted up their voices and spake unto the people, saying:
+And it came to pass, in the seventeen day of the fifth month, that the elders of the Magic Lab — even Felice and the Elders — lifted up their voices and spake unto the people, saying:
 
 Thus saith the Fellowship: *Come.*
 
@@ -40,6 +46,7 @@ And it was good.
 ---
 
 *Here endeth the proclamation.*
+
 *Selah.*
 
 ---

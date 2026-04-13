@@ -1,6 +1,6 @@
 ---
-title: "Steve Jobs Keynote"
-style: "Steve Jobs Keynote"
+title: "One More Thing"
+style: "One More Thing"
 date: 2026-04-20
 type: text
 fonts: ["Inter:wght@300;400;700"]

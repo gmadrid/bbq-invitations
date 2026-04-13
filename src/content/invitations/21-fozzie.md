@@ -1,6 +1,6 @@
 ---
-title: "Fozzie Bear"
-style: "Fozzie Bear"
+title: "The Bear"
+style: "The Bear"
 date: 2026-04-29
 type: text
 fonts: ["Boogaloo"]

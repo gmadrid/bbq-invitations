@@ -1,6 +1,6 @@
 ---
-title: "Overwrought Emcee"
-style: "Overwrought Emcee"
+title: "The Emcee"
+style: "The Emcee"
 date: 2026-05-09
 type: text
 fonts: []

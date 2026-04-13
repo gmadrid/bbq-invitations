@@ -1,6 +1,6 @@
 ---
-title: "Yearbook Signing"
-style: "Yearbook Signing"
+title: "Yearbook"
+style: "Yearbook"
 date: 2026-05-07
 type: text
 fonts: []

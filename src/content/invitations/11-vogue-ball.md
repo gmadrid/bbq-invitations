@@ -1,6 +1,6 @@
 ---
-title: "Voguing Ball"
-style: "Voguing Ball"
+title: "Backyard Realness"
+style: "Backyard Realness"
 date: 2026-04-19
 type: html
 fonts: ["Bebas+Neue", "Barlow+Condensed:ital,wght@0,300;0,700;1,300;1,700"]

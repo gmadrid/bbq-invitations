@@ -1,6 +1,6 @@
 ---
-title: "George Carlin"
-style: "George Carlin"
+title: "George"
+style: "George"
 date: 2026-04-26
 type: text
 fonts: ["Roboto+Slab:wght@400;700"]

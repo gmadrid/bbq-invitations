@@ -1,6 +1,6 @@
 ---
-title: "Kermit the Frog"
-style: "Kermit the Frog"
+title: "The Frog"
+style: "The Frog"
 date: 2026-04-23
 type: text
 fonts: ["Patrick+Hand"]
