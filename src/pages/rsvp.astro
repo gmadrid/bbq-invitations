@@ -376,9 +376,13 @@ import { EVENT } from '../config';
       });
     });
 
+    const submitBtn = form.querySelector('button[type="submit"]');
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       error.classList.remove('visible');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
 
       const data = new FormData(form);
       const attending = data.get('attending') === 'yes';
@@ -395,9 +399,13 @@ import { EVENT } from '../config';
           (attending ? thanks : regrets).classList.add('visible');
         } else {
           error.classList.add('visible');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'RSVP →';
         }
       } catch {
         error.classList.add('visible');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'RSVP →';
       }
     });
   </script>
