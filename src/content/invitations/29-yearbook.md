@@ -1,12 +1,17 @@
 ---
-windowTitle: "Yearbook"
-style: "Yearbook"
+windowTitle: "Stay Magical"
+style: "Stay Magical"
 date: 2026-05-07
 type: text
-fonts: []
+fonts: ["Shadows Into Light Two:wght@400;700"]
 accentColor: "#8a2a5a"
 teaser: "I know we're all going to see each other at the BBQ but I still wanted to write something."
+thumbnail: "/thumbnails/29-yearbook.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Shadows Into Light Two', cursive; font-size: 1.25rem; }
+</style>
 
 Hey Magic Lab!!
 
@@ -18,7 +23,7 @@ This year meant a lot to me. Like A LOT a lot. I don't want to get all weird abo
 
 Felice you are an ICON please never change.
 
-Jeannine — okay I don't know if Jeannine is reading this but if you are, the ribs last year changed my life. I'm not joking. I think about them. See you at the grill!!
+Jeannine — okay I don't know if Jeannine is reading this but if you are, the burgers last year changed my life. I'm not joking. I think about them. See you at the grill!!
 
 To everyone else: don't lose touch. I mean it. I know everyone always says that and then life happens but I genuinely mean it this time.
 

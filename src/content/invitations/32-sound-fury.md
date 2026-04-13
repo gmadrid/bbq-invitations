@@ -3,10 +3,16 @@ windowTitle: "The Sound and the Fury"
 style: "The Sound and the Fury"
 date: 2026-05-10
 type: text
-fonts: ["Lora:ital,wght@0,400;1,400"]
+fonts: ["Gentium Book Plus:ital,wght@0,400;0,700;1,400"]
 accentColor: "#1a1208"
 teaser: "Four voices. One barbecue. Dilsey gets the last word."
+thumbnail: "/thumbnails/32-sound-fury.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Gentium Book Plus', Georgia, serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Gentium Book Plus', Georgia, serif; }
+</style>
 
 **The Gathering**
 
@@ -72,7 +78,7 @@ But sure. Chips are fine.
 
 They came.
 
-They always came in the end. That was the thing about them. You could say what you wanted about the Magic Lab and Lord knows Felice had her ways and the Founders had their ways and some of those ways were not ways Dilsey would have chosen but they came when the season was over they came to the garden and Jeannine had the fire going since before any of them were out of bed and the smoke went up into the Arlington sky and it smelled like every other May and also not like any May there had ever been.
+They always came in the end. That was the thing about them. You could say what you wanted about the Magic Lab and Lord knows Felice had her ways and the Fathers had their ways and some of those ways were not ways Dilsey would have chosen but they came when the season was over they came to the garden and Jeannine had the fire going since before any of them were out of bed and the smoke went up into the Arlington sky and it smelled like every other May and also not like any May there had ever been.
 
 Dilsey had seen the first of them and she reckoned she'd see the last.
 

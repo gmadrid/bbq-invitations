@@ -3,10 +3,16 @@ windowTitle: "The Emcee"
 style: "The Emcee"
 date: 2026-05-09
 type: text
-fonts: []
+fonts: ["DM Serif Display:wght@400;700;900"]
 accentColor: "#1a1a4a"
 teaser: "Ladies... and gentlemen."
+thumbnail: "/thumbnails/31-emcee.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'DM Serif Display', Georgia, serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'DM Serif Display', Georgia, serif; }
+</style>
 
 *[dramatic sting]*
 

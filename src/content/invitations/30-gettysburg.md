@@ -3,10 +3,16 @@ windowTitle: "Gettysburg"
 style: "Gettysburg"
 date: 2026-05-08
 type: text
-fonts: []
+fonts: ["Della Respira"]
 accentColor: "#1a1a2a"
 teaser: "Four seasons and several months ago, our Founders brought forth a new fellowship."
+thumbnail: "/thumbnails/30-gettysburg.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Della Respira', Georgia, serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Della Respira', Georgia, serif; }
+</style>
 
 *[delivered slowly, with great solemnity, at a podium, in a stovepipe hat]*
 
