@@ -3,7 +3,7 @@ title: "Gettysburg"
 style: "Gettysburg"
 date: 2026-05-08
 type: text
-fonts: ["Libre+Baskerville:ital@0;1"]
+fonts: []
 accentColor: "#1a1a2a"
 teaser: "Four seasons and several months ago, our Founders brought forth a new fellowship."
 ---
