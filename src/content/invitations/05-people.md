@@ -3,7 +3,7 @@ title: "People Magazine"
 style: "People Magazine"
 date: 2026-04-13
 type: text
-fonts: ["Source+Sans+3:ital,wght@0,400;0,600;1,400"]
+fonts: ["Source Sans 3:ital,wght@0,400;0,600;1,400"]
 accentColor: "#c8200a"
 teaser: "Inside the backyard bash everyone is talking about."
 thumbnail: "/thumbnails/05-people.png"

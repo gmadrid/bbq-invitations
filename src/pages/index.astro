@@ -70,6 +70,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
       aspect-ratio: 4/3;
       object-fit: cover;
       border: var(--border-width) solid var(--border);
+      transition: transform 0.15s, border-color 0.15s;
     }
 
     .hero-latest-title {
@@ -82,10 +83,6 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
     .hero-latest:hover .hero-latest-img {
       border-color: var(--accent);
       box-shadow: 0 0 0 2px var(--accent);
-    }
-
-    .hero-latest-img {
-      transition: transform 0.15s, border-color 0.15s;
     }
 
     .hero-latest:hover .hero-latest-label {
@@ -355,7 +352,7 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg">BBQ</div>
+    <div class="hero-bg" aria-hidden="true">BBQ</div>
     <div class="hero-content">
       <div class="hero-text">
         <span class="eyebrow">Boston Magic Lab · End of Season · 2026</span>

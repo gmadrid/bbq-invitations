@@ -3,7 +3,7 @@ title: "Circus Broadside"
 style: "Circus Broadside"
 date: 2026-04-18
 type: html
-fonts: ["Alfa+Slab+One", "Special+Elite"]
+fonts: ["Alfa Slab One", "Special Elite"]
 accentColor: "#0a0f2e"
 teaser: "One Day Only! Jeannine at the Grill!"
 thumbnail: "/thumbnails/10-circus.png"

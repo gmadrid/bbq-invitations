@@ -3,7 +3,7 @@ title: "Kindergarten Teacher"
 style: "Kindergarten Teacher"
 date: 2026-04-30
 type: text
-fonts: ["Coming+Soon"]
+fonts: ["Coming Soon"]
 accentColor: "#d44a00"
 teaser: "Can I have everybody's eyes up here please?"
 thumbnail: "/thumbnails/22-kindergarten.png"

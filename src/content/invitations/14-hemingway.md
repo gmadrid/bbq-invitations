@@ -3,7 +3,7 @@ title: "The Grill Was Good"
 style: "The Grill Was Good"
 date: 2026-04-22
 type: text
-fonts: ["Special+Elite"]
+fonts: ["Special Elite"]
 accentColor: "#2a1a10"
 teaser: "Short sentences. You know the drill."
 thumbnail: "/thumbnails/14-hemingway.png"

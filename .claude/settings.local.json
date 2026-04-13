@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep \"^date:\" /Users/gmadrid/Documents/Projects/bbq-invitations/src/content/invitations/*.md)"
+    ]
+  }
+}

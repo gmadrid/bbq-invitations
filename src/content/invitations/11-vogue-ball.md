@@ -3,7 +3,7 @@ title: "Backyard Realness"
 style: "Backyard Realness"
 date: 2026-04-19
 type: html
-fonts: ["Bebas+Neue", "Barlow+Condensed:ital,wght@0,300;0,700;1,300;1,700"]
+fonts: ["Bebas Neue", "Barlow Condensed:ital,wght@0,300;0,700;1,300;1,700"]
 accentColor: "#0e0010"
 teaser: "The category is: Backyard Realness. Ten across the board."
 thumbnail: "/thumbnails/11-vogue-ball.png"

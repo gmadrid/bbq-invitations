@@ -3,7 +3,7 @@ title: "Elizabethan Court"
 style: "Elizabethan Court"
 date: 2026-04-11
 type: html
-fonts: ["IM+Fell+English:ital@0;1", "IM+Fell+DW+Pica:ital@0;1"]
+fonts: ["IM Fell English:ital@0;1", "IM Fell DW Pica:ital@0;1"]
 accentColor: "#1a3a1a"
 teaser: "Know ye by these presents..."
 thumbnail: "/thumbnails/03-elizabethan.png"

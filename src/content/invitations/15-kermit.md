@@ -3,7 +3,7 @@ title: "The Frog"
 style: "The Frog"
 date: 2026-04-23
 type: text
-fonts: ["Patrick+Hand"]
+fonts: ["Patrick Hand"]
 accentColor: "#2d6a2d"
 teaser: "Hi ho, everybody. I have a little announcement."
 thumbnail: "/thumbnails/15-kermit.png"

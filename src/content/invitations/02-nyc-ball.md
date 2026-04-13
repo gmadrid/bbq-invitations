@@ -3,7 +3,7 @@ title: "Fancy New York Ball"
 style: "Fancy New York Ball"
 date: 2026-04-10
 type: html
-fonts: ["Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400", "Cormorant+SC:wght@300;400"]
+fonts: ["Cormorant Garamond:ital,wght@0,300;0,400;1,300;1,400", "Cormorant SC:wght@300;400"]
 accentColor: "#1a1a1a"
 teaser: "Charcoal and gold. A whisper. The monogram."
 thumbnail: "/thumbnails/02-nyc-ball.png"

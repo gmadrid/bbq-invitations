@@ -3,7 +3,7 @@ title: "Cher, Come Eat"
 style: "Cher, Come Eat"
 date: 2026-04-17
 type: html
-fonts: ["Playfair+Display:ital,wght@0,700;1,400"]
+fonts: ["Playfair Display:ital,wght@0,700;1,400"]
 accentColor: "#1a0a00"
 teaser: "La Magia & The Bayou. Est. This Season."
 thumbnail: "/thumbnails/09-menu.png"

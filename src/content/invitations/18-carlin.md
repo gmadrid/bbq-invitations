@@ -3,7 +3,7 @@ title: "George"
 style: "George"
 date: 2026-04-26
 type: text
-fonts: ["Roboto+Slab:wght@400;700"]
+fonts: ["Roboto Slab:wght@400;700"]
 accentColor: "#2a2a2a"
 teaser: "Did you ever notice we have a whole ritual around the end of things?"
 thumbnail: "/thumbnails/18-carlin.png"
