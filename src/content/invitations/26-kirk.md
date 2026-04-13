@@ -3,15 +3,15 @@ title: "Kirk"
 style: "Kirk"
 date: 2026-05-04
 type: text
-fonts: ["Orbitron:wght@400;700"]
+fonts: ["Rajdhani:wght@400;700"]
 accentColor: "#1a1a4a"
 teaser: "Don't tell me the odds."
 thumbnail: "/thumbnails/26-kirk.png"
 ---
 
 <style>
-.inv-text-body { font-family: 'Orbitron', 'Courier New', monospace; }
-.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Orbitron', 'Courier New', monospace; }
+.inv-text-body { font-family: 'Rajdhani', 'Courier New', monospace; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Rajdhani', 'Courier New', monospace; }
 </style>
 
 *Captain's Log. Stardate — irrelevant. It's May. It's Sunday. It's Arlington.*
