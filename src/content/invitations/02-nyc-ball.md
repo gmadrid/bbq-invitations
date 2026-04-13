@@ -1,5 +1,5 @@
 ---
-title: "Fancy New York Ball"
+windowTitle: "Fancy New York Ball"
 style: "Fancy New York Ball"
 date: 2026-04-10
 type: html

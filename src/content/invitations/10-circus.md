@@ -1,5 +1,5 @@
 ---
-title: "Circus Broadside"
+windowTitle: "Circus Broadside"
 style: "Circus Broadside"
 date: 2026-04-18
 type: html

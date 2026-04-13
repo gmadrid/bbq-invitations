@@ -1,5 +1,5 @@
 ---
-title: "Elizabethan Court"
+windowTitle: "Elizabethan Court"
 style: "Elizabethan Court"
 date: 2026-04-11
 type: html

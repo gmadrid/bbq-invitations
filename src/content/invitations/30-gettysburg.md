@@ -1,5 +1,5 @@
 ---
-title: "Gettysburg"
+windowTitle: "Gettysburg"
 style: "Gettysburg"
 date: 2026-05-08
 type: text

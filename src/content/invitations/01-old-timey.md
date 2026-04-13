@@ -1,5 +1,5 @@
 ---
-title: "The Old-Timey Invitation"
+windowTitle: "The Old-Timey Invitation"
 style: "Old-Timey Invitation"
 date: 2026-04-08
 type: html

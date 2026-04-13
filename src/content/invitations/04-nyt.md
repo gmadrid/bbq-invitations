@@ -1,5 +1,5 @@
 ---
-title: "New York Times"
+windowTitle: "New York Times"
 style: "New York Times Front Page"
 date: 2026-04-12
 type: text

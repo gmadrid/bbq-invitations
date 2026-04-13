@@ -1,5 +1,5 @@
 ---
-title: "Emoji Only"
+windowTitle: "Emoji Only"
 style: "Emoji Only"
 date: 2026-05-16
 type: text

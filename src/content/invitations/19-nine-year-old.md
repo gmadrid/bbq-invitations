@@ -1,5 +1,5 @@
 ---
-title: "Nine-Year-Old"
+windowTitle: "Nine-Year-Old"
 style: "Nine-Year-Old"
 date: 2026-04-27
 type: text

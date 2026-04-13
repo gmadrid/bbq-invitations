@@ -1,5 +1,5 @@
 ---
-title: "Haiku"
+windowTitle: "Haiku"
 style: "Haiku"
 date: 2026-04-21
 type: text

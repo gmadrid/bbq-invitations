@@ -1,5 +1,5 @@
 ---
-title: "South Park"
+windowTitle: "South Park"
 style: "South Park"
 date: 2026-05-06
 type: text

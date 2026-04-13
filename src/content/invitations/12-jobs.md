@@ -1,5 +1,5 @@
 ---
-title: "One More Thing"
+windowTitle: "One More Thing"
 style: "One More Thing"
 date: 2026-04-20
 type: text

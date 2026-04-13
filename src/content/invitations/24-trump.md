@@ -1,5 +1,5 @@
 ---
-title: "45/47"
+windowTitle: "45/47"
 style: "45/47"
 date: 2026-05-02
 type: text

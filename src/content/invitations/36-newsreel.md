@@ -1,5 +1,5 @@
 ---
-title: "1940s Newsreel"
+windowTitle: "1940s Newsreel"
 style: "1940s Newsreel"
 date: 2026-05-14
 type: text

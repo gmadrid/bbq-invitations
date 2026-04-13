@@ -1,5 +1,5 @@
 ---
-title: "The Frog"
+windowTitle: "The Frog"
 style: "The Frog"
 date: 2026-04-23
 type: text

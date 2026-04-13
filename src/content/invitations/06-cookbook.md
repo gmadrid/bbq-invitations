@@ -1,5 +1,5 @@
 ---
-title: "Cookbook Recipe"
+windowTitle: "Cookbook Recipe"
 style: "Cookbook Recipe"
 date: 2026-04-14
 type: text

@@ -1,5 +1,5 @@
 ---
-title: "Kindergarten Teacher"
+windowTitle: "Kindergarten Teacher"
 style: "Kindergarten Teacher"
 date: 2026-04-30
 type: text

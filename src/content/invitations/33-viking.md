@@ -1,5 +1,5 @@
 ---
-title: "Old Norse Viking"
+windowTitle: "Old Norse Viking"
 style: "Old Norse Viking"
 date: 2026-05-11
 type: text

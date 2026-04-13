@@ -1,5 +1,5 @@
 ---
-title: "The Grill Was Good"
+windowTitle: "The Grill Was Good"
 style: "The Grill Was Good"
 date: 2026-04-22
 type: text

@@ -1,5 +1,5 @@
 ---
-title: "The Sound and the Fury"
+windowTitle: "The Sound and the Fury"
 style: "The Sound and the Fury"
 date: 2026-05-10
 type: text

@@ -1,5 +1,5 @@
 ---
-title: "Tarot Reading"
+windowTitle: "Tarot Reading"
 style: "Tarot Reading"
 date: 2026-05-13
 type: text

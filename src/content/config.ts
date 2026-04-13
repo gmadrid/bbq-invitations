@@ -3,7 +3,7 @@ import { defineCollection, z } from 'astro:content';
 const invitations = defineCollection({
   type: 'content',
   schema: z.object({
-    title: z.string(),
+    windowTitle: z.string(),    // browser tab title
     style: z.string(),          // display name, e.g. "Old-Timey Magic Poster"
     date: z.date(),             // for ordering / one-a-day publishing
     type: z.enum(['text', 'html']),  // text = markdown, html = raw HTML component

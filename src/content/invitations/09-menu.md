@@ -1,5 +1,5 @@
 ---
-title: "Cher, Come Eat"
+windowTitle: "Cher, Come Eat"
 style: "Cher, Come Eat"
 date: 2026-04-17
 type: html

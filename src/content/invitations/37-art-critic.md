@@ -1,5 +1,5 @@
 ---
-title: "Postmodern Art Critic"
+windowTitle: "Postmodern Art Critic"
 style: "Postmodern Art Critic"
 date: 2026-05-15
 type: text

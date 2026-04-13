@@ -1,5 +1,5 @@
 ---
-title: "Queene of Fairyes"
+windowTitle: "Queene of Fairyes"
 style: "Queene of Fairyes"
 date: 2026-05-01
 type: text

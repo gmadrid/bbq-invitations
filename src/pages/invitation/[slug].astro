@@ -15,7 +15,7 @@ const { Content } = await inv.render();
 const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <Base
-  title={inv.data.style}
+  title={inv.data.windowTitle}
   fonts={inv.data.fonts}
   accentColor={inv.data.accentColor}
   ogImage={inv.data.thumbnail}

@@ -1,5 +1,5 @@
 ---
-title: "Limerick"
+windowTitle: "Limerick"
 style: "Limerick"
 date: 2026-04-25
 type: text

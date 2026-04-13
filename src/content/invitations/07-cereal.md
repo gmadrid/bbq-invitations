@@ -1,5 +1,5 @@
 ---
-title: "A Complete Breakfast"
+windowTitle: "A Complete Breakfast"
 style: "Part of a Complete Breakfast"
 date: 2026-04-15
 type: html
