@@ -3,10 +3,16 @@ windowTitle: "Tarot Reading"
 style: "Tarot Reading"
 date: 2026-05-13
 type: text
-fonts: ["Lora:ital,wght@0,400;1,400"]
+fonts: ["Spectral:ital@0;1"]
 accentColor: "#2a1a4a"
 teaser: "The cards do not lie. Coordination of provisions forthcoming."
+thumbnail: "/thumbnails/35-tarot.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Spectral', Georgia, serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Spectral', Georgia, serif; }
+</style>
 
 *[three shuffles. something shifts.]*
 

@@ -3,10 +3,16 @@ windowTitle: "Lamour"
 style: "Lamour"
 date: 2026-05-12
 type: text
-fonts: []
+fonts: ["Courier Prime:ital,wght@0,400;0,700;1,400"]
 accentColor: "#4a2a00"
 teaser: "Say Bing, where are we headed? Arlington. There's a barbecue."
+thumbnail: "/thumbnails/34-crosby-hope.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Courier Prime', 'Courier New', monospace; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Courier Prime', 'Courier New', monospace; }
+</style>
 
 *[TITLE CARD: "ROAD TO ARLINGTON"]*
 
@@ -166,6 +172,6 @@ He always gets to the food first. Forty years. Every picture. The food.
 
 *[ukulele sting]*
 
-*[TITLE CARD: "Produced by Felice & the Founders — Boston Magic Lab"]*
+*[TITLE CARD: "Produced by Felice & the Directors — Boston Magic Lab"]*
 
 *[TITLE CARD: "No camels were harmed in the making of this invitation"]*

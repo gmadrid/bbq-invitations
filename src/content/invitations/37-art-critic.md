@@ -3,10 +3,16 @@ windowTitle: "Postmodern Art Critic"
 style: "Postmodern Art Critic"
 date: 2026-05-15
 type: text
-fonts: ["Lora:ital,wght@0,400;1,400"]
+fonts: ["Syne:ital,wght@0,400;0,700;1,400"]
 accentColor: "#2a2a2a"
 teaser: "The gesture toward barbecue is, of course, not really about barbecue."
+thumbnail: "/thumbnails/37-art-critic.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Syne', Arial, sans-serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Syne', Arial, sans-serif; }
+</style>
 
 **Untitled (Invitation), 2026**
 *Mixed media: grilled meat, community, late capitalism*
@@ -25,7 +31,7 @@ Central to the work is Jeannine, whose presence at the grill enacts a complex ne
 
 Guests are asked to bring food and drink to share. This participatory dimension situates the work firmly in the tradition of relational aesthetics — Bourriaud, obviously, but also something older and less theorized, something that smells like potato salad. The coordination of provisions remains, at time of writing, unresolved. The artists have described this as "intentional." They have not been challenged on this.
 
-Produced under the auspices of Felice and the Founders, the work will run for one afternoon only. There is no catalogue. There is no artist's talk, though someone will inevitably hold forth near the cooler. Attendance is not mandatory but is, in some sense that resists articulation, *expected.*
+Produced under the auspices of Felice and the Critics, the work will run for one afternoon only. There is no catalogue. There is no artist's talk, though someone will inevitably hold forth near the cooler. Attendance is not mandatory but is, in some sense that resists articulation, *expected.*
 
 The Magic Lab does not explain itself. The smoke rises. The season has ended.
 

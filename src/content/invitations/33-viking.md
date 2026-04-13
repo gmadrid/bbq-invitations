@@ -3,10 +3,16 @@ windowTitle: "Old Norse Viking"
 style: "Old Norse Viking"
 date: 2026-05-11
 type: text
-fonts: []
+fonts: ["MedievalSharp"]
 accentColor: "#1a2a4a"
 teaser: "Hear me, ye who have ears and are not yet dead."
+thumbnail: "/thumbnails/33-viking.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'MedievalSharp', Georgia, serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'MedievalSharp', Georgia, serif; }
+</style>
 
 **The Summons of the Magic Lab**
 *As carved upon the runestone at Arlington, in the fifth month, in the year two thousand and twenty-six*
@@ -17,7 +23,7 @@ Hear me, ye who have ears and are not yet dead.
 
 The season of conjuring is ended. The great works have been wrought. The Lab of Magic — whose deeds are known from the harbor of Boston to the further shores of Somerville, and whose name causes the weak to tremble and the strong to nod respectfully — has looked upon its labors and found them good.
 
-And so the Founders have spoken from their hall on Scituate Street.
+And so the Jarls have spoken from their hall on Scituate Street.
 
 *There shall be feasting.*
 
@@ -49,7 +55,7 @@ To eat what comes off Jeannine's grill is to understand, briefly and completely,
 
 Each warrior who comes to the feast shall bring an offering. Food or drink, as the fates allow. The warrior who brings nothing shall be remembered in the sagas, and not in the good way.
 
-The coordination of what each warrior shall bring is forthcoming. The Founders have said this. Trust the Founders. They have not yet led anyone into a fjord.
+The coordination of what each warrior shall bring is forthcoming. The Jarls have said this. Trust the Jarls. They have not yet led anyone into a fjord.
 
 ---
 
@@ -85,4 +91,4 @@ This is the whole of the wisdom of the Magic Lab.
 
 ---
 
-*Carved by order of Felice and the Founders. Anno Domini 2026. Rear Garden. One o'clock. Bring something or be remembered poorly in the sagas.*
+*Carved by order of Felice and the Jarls. Anno Domini 2026. Rear Garden. One o'clock. Bring something or be remembered poorly in the sagas.*

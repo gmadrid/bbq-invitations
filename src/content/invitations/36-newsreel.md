@@ -3,10 +3,16 @@ windowTitle: "1940s Newsreel"
 style: "1940s Newsreel"
 date: 2026-05-14
 type: text
-fonts: []
+fonts: ["Oswald:wght@400;700"]
 accentColor: "#1a1a1a"
 teaser: "ARLINGTON, MASSACHUSETTS — AND THE WORLD WATCHES!"
+thumbnail: "/thumbnails/36-newsreel.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Oswald', Arial, sans-serif; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Oswald', Arial, sans-serif; }
+</style>
 
 *[FANFARE]*
 
@@ -58,4 +64,4 @@ The barbecue!
 
 *[FADE TO BLACK]*
 
-*[END CARD: A Universal Newsreel. Produced by Felice & the Founders. May 17, 2026. One o'clock. 70 Scituate St, Arlington. Rear Garden. Bring Something.]*
+*[END CARD: A Universal Newsreel. Produced by Felice & the Reporters. May 17, 2026. One o'clock. 70 Scituate St, Arlington. Rear Garden. Bring Something.]*
