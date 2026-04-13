@@ -1,6 +1,6 @@
 ---
-title: "Crosby & Hope"
-style: "Crosby & Hope on the Road"
+title: "Lamour"
+style: "Lamour"
 date: 2026-05-12
 type: text
 fonts: []
@@ -168,4 +168,4 @@ He always gets to the food first. Forty years. Every picture. The food.
 
 *[TITLE CARD: "Produced by Felice & the Founders — Boston Magic Lab"]*
 
-*[TITLE CARD: "No Patachou were harmed in the making of this invitation"]*
+*[TITLE CARD: "No camels were harmed in the making of this invitation"]*

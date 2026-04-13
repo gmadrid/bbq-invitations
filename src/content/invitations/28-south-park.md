@@ -3,10 +3,16 @@ title: "South Park"
 style: "South Park"
 date: 2026-05-06
 type: text
-fonts: []
+fonts: ["Fredoka:ital,wght@0,400;0,700;1,400"]
 accentColor: "#1a3a6a"
 teaser: "Dude. The Magic Lab is having a barbecue."
+thumbnail: "/thumbnails/28-south-park.png"
 ---
+
+<style>
+.inv-text-body { font-family: 'Fredoka', 'Comic Sans MS', cursive; }
+.inv-text-body h1, .inv-text-body h2, .inv-text-body h3 { font-family: 'Fredoka', 'Comic Sans MS', cursive; }
+</style>
 
 STAN: Dude.
 
@@ -62,7 +68,7 @@ CARTMAN: I said SOME barbecues are stupid. Barbecues without Jeannine. Which are
 
 KENNY: *[muffled]* mmph mmmph mmm mmmph mmph
 
-STAN: Kenny says he's been thinking about Jeannine's ribs since last year.
+STAN: Kenny says he's been thinking about Jeannine's burgers since last year.
 
 KYLE: Yeah Kenny, same, honestly.
 
@@ -70,7 +76,7 @@ CARTMAN: Last year I had three of them and I'm not ashamed of that. I would have
 
 KYLE: Do not look at me —
 
-CARTMAN: I'm not looking at anyone, Kyle, I'm just saying that three ribs is not enough ribs for a growing boy and if certain people had been more aware of the concept of sharing —
+CARTMAN: I'm not looking at anyone, Kyle, I'm just saying that three burgers is not enough burgers for a growing boy and if certain people had been more aware of the concept of sharing —
 
 KYLE: You took NINE before anyone else had ANY.
 
@@ -150,4 +156,4 @@ KENNY: *[muffled]* mmph.
 
 *[He has four of Kenny's pigs in blankets.]*
 
-*[Kenny dies on the way home, unrelated.]*
+*[On the way home, Kenny is trampled by a roving pack of feral chihuahuas.]*
