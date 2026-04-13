@@ -1,11 +1,2 @@
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: Slackbot
-Allow: /
-
 User-agent: *
-Disallow: /
+Disallow:
