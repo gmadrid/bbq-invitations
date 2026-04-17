@@ -78,7 +78,7 @@ It's the best one we've ever done.
 
 *[slide changes. Black screen. White text: "One more thing."]*
 
-Felice said to say hi.
+Felice will be your friend.
 
 *[He grins. Turns and walks off. "Suite: Judy Blue Eyes" starts playing for no clear reason.]*
 
