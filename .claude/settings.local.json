@@ -3,5 +3,8 @@
     "allow": [
       "Bash(grep \"^date:\" /Users/gmadrid/Documents/Projects/bbq-invitations/src/content/invitations/*.md)"
     ]
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true
   }
 }
